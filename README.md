@@ -32,3 +32,7 @@ Linked List
 - doubly linked list 
 
 Trees
+- dfs , bfs
+- dfs and bfs remember that you can add more parameters and it doesnt have to only be one 
+- each level processing
+- passing nodes 
