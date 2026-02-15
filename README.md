@@ -1,4 +1,10 @@
+Arrays
+- Running Sum
+- Prefix/Suffix
+- swap
+
 Two pointers
+
 
 - how many pointers do we need?
 - where do we start from? front or back?
@@ -21,6 +27,7 @@ Stack
 - do we need specific order?
 - must we always process when we see something
 - if something breaks condtion must we pop?
+- we can store max of already seen, or something we've alreay seen from previous 
 
 
 Binary Search
