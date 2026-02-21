@@ -24,7 +24,9 @@ class Solution:
         #1 white
         #2 blue
 
-        #we can't simply have two pointers both at beginning because, we also need to check whether the swap is equal to another element
+        #we can't simply have two pointers both at beginning because,
+        #  we also need to check whether the swap is equal 
+        # to another element
 
         #use 3 pointers
 

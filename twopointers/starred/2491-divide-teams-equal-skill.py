@@ -20,12 +20,12 @@ from collections import Counter
 class Solution:
     def dividePlayers(self, skill: list[int]) -> int:
         
-        # Sum of all players' skills
-        total = sum(skill)
+        
+        total = sum(skill) #total skills
 
-        # There are n players and n/2 teams.
-        # If every team has the same total skill:
-        #
+        # There are n players and n/2 teams
+        # if every team has the same total skill:
+        # we solve for each team skill sum
         #   (team sum) × (number of teams) = total skill
         #   team_sum × (n / 2) = total
         #   team_sum = (2 × total) / n
@@ -35,26 +35,24 @@ class Solution:
         if (2 * total) % len(skill):
             return -1 
         
-        # Count how many times each skill value appears
-        # This lets us "consume" players as we form teams
+        # count how many times each skill value appears
+        # WE  "consume" players as we form teams
         count = Counter(skill)
 
-        # Target sum that every pair of players must equal
-        target = (2 * total) // len(skill)
+        # we aim for this target for each team/pair
+        target = (2 * total) // len(skill)  #number of players
 
-        res = 0  # will store the total chemistry
+        res = 0  # store total chemistry
 
-        # Iterate through the original skill list
-        # (not the Counter keys) so every player is considered
         for s in skill:
-
+ #similar to two sum
             # If this skill has already been fully used in previous pairs,
-            # skip it — it has already been assigned to a team.
+            # skip it — it has already been assigned to a team
             if not count[s]:
                 continue
             
             # To form a valid team, we need another player whose skill
-            # makes the pair sum to `target`
+            # makes the pair sum to target
             diff = target - s
 
             # If there is no available player with the required skill,
@@ -62,13 +60,13 @@ class Solution:
             if not count[diff]:
                 return -1
             
-            # Valid pair found:
+            #valid then 
             # add their chemistry (product of skills)
             res += s * diff
 
-            # Consume one player of each skill so they are not reused
+            # remove that player diff and current player s 
             count[s] -= 1
             count[diff] -= 1
         
-        # If all players were successfully paired, return total chemistry
+
         return res

@@ -19,6 +19,7 @@ Sliding Window
 - measure window
 - do we need to sort?
 - be careful about where you place your measuring code, inside condition or after, be careful
+- you can use queue as secondary DS
 
 
 Stack
@@ -43,3 +44,10 @@ Trees
 - dfs and bfs remember that you can add more parameters and it doesnt have to only be one 
 - each level processing
 - passing nodes 
+
+Heap
+- we can use min or max
+- we can add more than one value
+- priority
+- double heaps
+    
