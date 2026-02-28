@@ -2,6 +2,7 @@ Arrays
 - Running Sum
 - Prefix/Suffix
 - swap
+- keep track of the compliement inside a hashmapn
 
 Two pointers
 

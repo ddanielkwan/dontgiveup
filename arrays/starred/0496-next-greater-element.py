@@ -41,7 +41,7 @@ class Solution:
 
         #let us use a stack, we will keep a mono decreasing stack
         #we will also use a hashmap where key is the element popped and value is the element greater than key
-
+        #IMPORTANT: key here isthat nums1 is subset of nums2
         stack = []
         hashmap = {}
 
