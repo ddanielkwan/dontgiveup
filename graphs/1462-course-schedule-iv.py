@@ -27,7 +27,7 @@ class Solution:
 
         for a,b in prerequisites:
             graph[b].append(a)
-
+        #solution 1 -> o(q *(n+m))
         # cache = {}
         # def dfs(node,target):
         #     if node == target:

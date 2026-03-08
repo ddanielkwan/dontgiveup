@@ -42,7 +42,7 @@ class Solution:
                 else:
                     l = m + 1
             
-            else:
+            else: #perfectly amount of elements
                 return nums[m]
         
         return -1

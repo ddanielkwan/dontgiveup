@@ -61,6 +61,6 @@ class Solution:
                 if dist < resDist:                      
                     resDist = dist                      # update best distance
                     res = i                             # update best node index
-y
+
 
         return res                                     
