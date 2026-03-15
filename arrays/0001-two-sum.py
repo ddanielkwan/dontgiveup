@@ -1,3 +1,4 @@
+#use HASHMAP to store negate
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
 

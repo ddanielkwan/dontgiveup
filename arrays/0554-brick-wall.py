@@ -7,7 +7,7 @@
 
 from collections import defaultdict
 
-
+#USE Hashmap
 class Solution:
     def leastBricks(self, wall: list[list[int]]) -> int:
 
@@ -20,7 +20,7 @@ class Solution:
 
         for row in wall:
             indexGap = 0 
-            for brick in row[:-1]:
+            for brick in row[:-1]: #dont include last one
                 indexGap += brick
                 gaps[indexGap] += 1
             

@@ -20,7 +20,7 @@
 
 from collections import defaultdict
 
-
+#HASHMAP
 class Solution:
     def maxLengthBetweenEqualCharacters(self, s: str) -> int:
         #store all indices of that character occurence in

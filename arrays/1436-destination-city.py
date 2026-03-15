@@ -12,7 +12,7 @@
 
 from collections import defaultdict
 
-
+#GRAPH TRAVERSAL adj list
 class Solution:
     def destCity(self, paths: list[list[str]]) -> str:
         prereq = defaultdict(list)

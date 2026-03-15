@@ -4,6 +4,8 @@
 # of the characters without disturbing the relative positions of the remaining characters. 
 # (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
 
+
+#USE TWO POINTER
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         #is S a sub seq of T

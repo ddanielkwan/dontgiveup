@@ -1,4 +1,6 @@
-# You are given a string s, return the length of the longest substring that contains at most two distinct characters.
+# You are given a string s, 
+# return the length of the longest substring that contains at most 
+# two distinct characters.
 
 # Note: A substring is a contiguous non-empty sequence of characters within a string.
 

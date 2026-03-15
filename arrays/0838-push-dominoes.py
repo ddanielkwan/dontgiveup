@@ -16,6 +16,7 @@
 from collections import deque
 
 
+#similar to BFS, each iteration handles level
 class Solution:
     def pushDominoes(self, dominoes: str) -> str:
         

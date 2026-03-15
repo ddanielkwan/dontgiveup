@@ -11,7 +11,7 @@
 # Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 
 
-
+#DETERMINE what is a sequence and a hashset
 class Solution:
     def longestConsecutive(self, nums: list[int]) -> int:
 

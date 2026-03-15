@@ -21,6 +21,7 @@
 #     assert nums[i] == expectedNums[i];
 # }
 
+#USE TWO POINTER to keep track of where to insert
 class Solution:
     def removeElement(self, nums: list[int], val: int) -> int:
         

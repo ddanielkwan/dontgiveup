@@ -1,4 +1,5 @@
-# Given a string s and an integer k, return the number of substrings in s of length k with no repeated characters.
+# Given a string s and an integer k, 
+# return the number of substrings in s of length k with no repeated characters.
 
 # Example 1:
 
@@ -49,7 +50,6 @@ class Solution:
                 freq[get_val(s[left])] -= 1
                 left += 1
 
-            # Expand the window
             right += 1
 
         return answer

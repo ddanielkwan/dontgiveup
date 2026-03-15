@@ -6,6 +6,7 @@
 
 # Return the leftmost pivot index. If no such index exists, return -1.
 
+#RUNNING TOTAL
 class Solution:
     def pivotIndex(self, nums: list[int]) -> int:
 

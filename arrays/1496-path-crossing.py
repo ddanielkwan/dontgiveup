@@ -2,7 +2,7 @@
 
 # Return true if the path crosses itself at any point, that is, if at any time you are on a location you have previously visited. Return false otherwise.
 
-
+#USE SET
 class Solution:
     def isPathCrossing(self, path: str) -> bool:
         

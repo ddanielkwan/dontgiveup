@@ -13,7 +13,7 @@
 # # 
 
 
-
+#USE ARRAY TO STORE PREFIX AND T HE NCLCUALTE SUFFIX
 class Solution:
     def productExceptSelf(self, nums: list[int]) -> list[int]:
         #get the prefix and suffix and calculate the result by multiplying them

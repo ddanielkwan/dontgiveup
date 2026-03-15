@@ -1,3 +1,4 @@
+#SLIDING WINDOW
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         #true if t is an anagram of s 

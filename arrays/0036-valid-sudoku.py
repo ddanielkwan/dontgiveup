@@ -12,7 +12,7 @@
 
 from collections import defaultdict
 
-
+#USE HASHMAP TO STORE VALUES OF EACH ROW COL AND SQUARE
 class Solution:
     def isValidSudoku(self, board: list[list[str]]) -> bool:
         

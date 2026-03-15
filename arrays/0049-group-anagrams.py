@@ -15,7 +15,7 @@
 
 from collections import defaultdict
 
-
+#use HASHMAP to store anagrams, need to decide on common key 
 class Solution:
     def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
 

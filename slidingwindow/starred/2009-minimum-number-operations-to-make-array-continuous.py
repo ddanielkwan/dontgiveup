@@ -1,4 +1,5 @@
-# You are given an integer array nums. In one operation, you can replace any element in nums with any integer.
+# You are given an integer array nums.
+#  In one operation, you can replace any element in nums with any integer.
 
 # nums is considered continuous if both of the following conditions are fulfilled:
 

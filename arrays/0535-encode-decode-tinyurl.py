@@ -14,11 +14,12 @@
 # Input: url = "https://leetcode.com/problems/design-tinyurl"
 # Output: "https://leetcode.com/problems/design-tinyurl"
 
+#use hashmap
 class Codec:
     
     def __init__(self):
-        self.longMap = {}
-        self.shortMap = {}
+        self.longMap = {} #lnog to short
+        self.shortMap = {} #short to long
         self.base = "https://www.please.com/"
 
     def encode(self, longUrl: str) -> str:

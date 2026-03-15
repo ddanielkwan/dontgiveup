@@ -1,5 +1,6 @@
 from typing import List
 
+#USE HASHSET
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         tracker = set()

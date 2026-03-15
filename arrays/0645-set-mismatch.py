@@ -7,6 +7,7 @@
 from collections import Counter
 
 
+#AGAIN USE HASHMAP counter
 class Solution:
     def findErrorNums(self, nums: list[int]) -> list[int]:
         #0 count is missing 2 is duplicate

@@ -16,6 +16,9 @@
 # Input: s = "AAAAAAAAAAAAA"
 # Output: ["AAAAAAAAAA"]
 # # 
+
+
+#OCCUR MROE THAN ONCE use HASHSET o(1) lookup
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
         seen = set()

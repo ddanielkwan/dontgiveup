@@ -1,4 +1,7 @@
-# You are given an array of integers nums and an integer limit, return the size of the longest non-empty subarray such that the absolute difference between any two elements of this subarray is less than or equal to limit.
+# You are given an array of integers nums and an integer limit,
+#  return the size of the longest non-empty subarray such that 
+# the absolute difference between any two elements of this subarray
+#  is less than or equal to limit.
 
 from collections import deque
 from typing import List

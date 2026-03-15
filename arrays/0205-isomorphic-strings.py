@@ -19,7 +19,7 @@
 # Mapping 'e' to 'a'.
 # Mapping 'g' to 'd'.
 
-
+#USE HASHSET
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         

@@ -5,7 +5,7 @@
 
 from collections import Counter
 
-
+#USE ARRRATY FOR BUCKETSORT
 class Solution:
     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         #bucket sort using array indices, each index represents the bucket (times of occurence)

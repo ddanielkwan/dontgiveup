@@ -4,7 +4,7 @@
 # Input: strs = ["flower","flow","flight"]
 # Output: "fl"
 
-
+#o(n^2) use simple loops
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         
