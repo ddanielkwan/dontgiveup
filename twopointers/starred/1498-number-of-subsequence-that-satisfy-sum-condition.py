@@ -34,7 +34,7 @@ class Solution:
         #we sort the input
         #3,3,5,6,8
         #for each element, how many elemnts to right can be added
-        #we have to add 2^(r-left+1)
+        #we have to add 2^(r-left+1)  #because each in between can be in or out
 
         #why
         r = len(nums) - 1
@@ -48,7 +48,7 @@ class Solution:
                 r -= 1
             
             if left_index <= r:
-                res += (2**(r-left_index))
+                res += (2**(r-left_index))  #because each in between can be in or out
                 res %= MOD
 
                 #mainly math and two pointer

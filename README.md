@@ -1,4 +1,10 @@
+
+
+Notes:
+- is there a different way to think of question? What about flipping the question opposite?
+
 Arrays
+
 - Running Sum
 - Prefix/Suffix
 - swap
@@ -33,7 +39,7 @@ Stack
 
 
 Binary Search
-- left pointer will always end at the first valid answer
+- left pointer will always end at the first valid answer, because search space will always shrink
 
 Linked List
 - do we need dummy node to help us
@@ -52,3 +58,13 @@ Heap
 - priority
 - double heaps
     
+Graphs
+- dfs, bfs
+- you can cache reults
+- topological sort
+Intervals
+
+
+Dynamic Programming
+- cache repitive work
+- bottom up, e.g what is the longest subsequnce that ENDS AT THIS INDEX?
