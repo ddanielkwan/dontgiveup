@@ -9,17 +9,11 @@
 # Output: [2,1,4,3]
 
 
-
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-from typing import Optional
-
-from linkedlist.ListNode import ListNode
-
-
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
         
@@ -29,7 +23,9 @@ class Solution:
 
         prev = dummy
         curr = head
-
+        #while there is two elements,
+        # Dummy -> curr -> curr.next -> curr.next.next
+        # prev ^ prev.next^    second^      
         while curr and curr.next:
             #note: curr will act as the first node 
             #and curr.next will act as the second node

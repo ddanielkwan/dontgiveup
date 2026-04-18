@@ -22,7 +22,6 @@
 # - We choose the indices 1, 2, and 3 with score = (3+3+2) * min(1,3,4) = 8.
 # Therefore, we return the max score, which is 12.
 
-
 class Solution:
     def maxScore(self, nums1: List[int], nums2: List[int], k: int) -> int:
         #  nums1 = [1,3,3,2], nums2 = [2,1,3,4], k = 3
@@ -34,7 +33,7 @@ class Solution:
         pairs = [(n1,n2 ) for n1,n2 in zip(nums1, nums2)]
         #want to sort in descending for second num2
         pairs = sorted(pairs,key=lambda p:p[1], reverse = True)
-
+        print(pairs)
         n1Sum = 0
         n2Min = float('inf')
         maxScore = 0
@@ -49,6 +48,10 @@ class Solution:
 
             #have we gone over the length of k
             if len(minHeap) > k:
+                #realization: once n2 is sorted in desc,
+                #4,3,2,1 does it matter what we choice from 2 elements from [4,3,2] not because
+                #the min is always 1, so now we want to optimize the remove the smallest n1 value
+                #thats whywe have heap
                 n1Pop = heapq.heappop(minHeap) #this pops the smallest n1, because we only care n1 if the min is alreadh set
                 n1Sum -= n1Pop
             

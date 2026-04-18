@@ -7,18 +7,11 @@
 
 # Input: head = [1,2,3,4,5], k = 2
 # Output: [4,5,1,2,3]
-
-
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-from typing import Optional
-
-from linkedlist.ListNode import ListNode
-
-
 class Solution:
     def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         if not head or not head.next or k == 0 :
@@ -47,7 +40,9 @@ class Solution:
             curr = curr.next
 
         newHead = curr.next
-        curr.next = None 
+        # 1 -> 2 -> 3-> 4->5
+                # ^curr ^newhead
+        curr.next = None  #cut the 3 -> 4 so now is 1 -> 2 -> 3 -> None
 
         print(newHead.val)
 

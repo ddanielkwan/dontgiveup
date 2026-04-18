@@ -25,6 +25,15 @@
 #         self.next = next
 class Solution:
     def splitListToParts(self, head: Optional[ListNode], k: int) -> List[Optional[ListNode]]:
+        #algorithm
+        #determine the total length
+        #determine the base length for each array spot by length // k
+        # the remainder length % k
+
+        #loop for k
+        #iterate through curr pointer for b base amount + 1 if there is remainder left
+        #decrement remainder
+        #make sure to cut off the tail and set curr as curr.next
         
         length = 0
         curr = head

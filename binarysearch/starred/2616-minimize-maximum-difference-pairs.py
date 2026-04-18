@@ -13,6 +13,13 @@
 # Explanation: The first pair is formed from the indices 1 and 4, and the second pair is formed from the indices 2 and 5. 
 # The maximum difference is max(|nums[1] - nums[4]|, |nums[2] - nums[5]|) = max(0, 1) = 1. Therefore, we return 1.
 
+
+# "Can I pick p pairs where every single pair has difference ≤ mid?"
+
+# If yes → your maximum difference is at most mid
+# If no → you need a bigger mid
+# So you're shrinking mid as much as possible, while still being able to form p valid pairs.
+
 class Solution:
     def minimizeMax(self, nums: list[int], p: int) -> int:
         #keep guessing the differences
@@ -42,7 +49,7 @@ class Solution:
         while l <= r :
             m = l + (r-l)//2
 
-            if validPairs(m):
+            if validPairs(m): #m here is minimized, max difference
                 r = m - 1
                 res = m
             else:

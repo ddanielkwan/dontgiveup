@@ -28,6 +28,12 @@ class Solution:
         #
         # So we convert:
         # "k-th largest" -> "index of k-th smallest"
+
+
+          #why this may be better than help on average
+        #because it splits search space by hallf everyime
+        #but can be n^2 if our pivot is always min or ,max
+        
         k = len(nums) - k
 
         def quickSelect(left, right):

@@ -9,6 +9,7 @@
 
 
 class Solution:
+    #because both traveling same distance so always intersefct
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]: # type: ignore
         
 

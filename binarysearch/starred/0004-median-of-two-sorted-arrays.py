@@ -55,6 +55,9 @@ class Solution:
                     return (max(aLeft, bLeft) + min(bRight, aRight))/2
                 return min(aRight,bRight) #else odd take the min since its on left
             elif aLeft > bLeft:
+                # l and r control the binary search on a's partition
+# moving r left (r = midPointA - 1) → take FEWER elements from a
+# moving l right (l = midPointA + 1) → take MORE elements from a
                 r = midPointA - 1
             else:
                 l = midPointA + 1

@@ -42,6 +42,8 @@ class Solution:
             #this is different from distinct 
             #what if we get same element?
             #take left and mid elemnt are same , just go l + 1
+            #2,2,2,2,3,1
+            #l  m  -> because left side is already sorted so lets just shift to right
             else:
                 l += 1
         
