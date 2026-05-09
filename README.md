@@ -91,3 +91,13 @@ Example: word break, coin change with weird denominations
 - what is the "state"
 - number of ways
 - can we space optimize withonly one row
+
+
+Intervals
+- sort intervals
+- sweeping line, add start end to hashmap and count
+
+
+Backtrack
+- dfs start at index, keep state
+-
