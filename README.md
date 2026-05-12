@@ -74,6 +74,7 @@ Dynamic Programming 1D
 - number of ways
 
 DP 2D
+- tabulation(bottom up) although the loop is from top, at every stage you want to ask yourself, [r][c] where did i come from? what is the condtion from previous to now?
 
 Ask yourself: "do I know the base case immediately?"
 Base case is obvious/small → Bottom-up
