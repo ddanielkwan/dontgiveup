@@ -28,3 +28,4 @@ class Solution:
             maxProfit = max(maxProfit, prices[sell] - prices[buy])
         
         return maxProfit
+

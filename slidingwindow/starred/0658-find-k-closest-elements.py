@@ -32,3 +32,4 @@ class Solution:
         
         res = arr[l:l+k]
         return res
+

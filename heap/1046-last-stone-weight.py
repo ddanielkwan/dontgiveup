@@ -36,3 +36,4 @@ class Solution:
                 heapq.heappush(stones, -abs(largest-second))
         
         return -stones[0] if stones else 0
+

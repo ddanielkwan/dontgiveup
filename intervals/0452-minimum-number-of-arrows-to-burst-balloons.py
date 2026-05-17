@@ -49,3 +49,4 @@ class Solution:
             else:
                 previous = current #do nothing
         return arrows
+

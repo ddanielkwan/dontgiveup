@@ -52,3 +52,4 @@ class Solution:
             return dp[(l, r)]
 
         return dfs(1, len(nums) - 2)
+

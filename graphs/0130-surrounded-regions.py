@@ -66,3 +66,4 @@ class Solution:
                     board[r][c] = "X"
                 if board[r][c] == "T":
                     board[r][c] = "O"
+

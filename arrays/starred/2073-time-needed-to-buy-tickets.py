@@ -42,3 +42,4 @@ class Solution:
                 time += min(tickets[k] - 1, tickets[i])
 
         return time
+

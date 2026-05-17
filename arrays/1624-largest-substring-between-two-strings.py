@@ -36,3 +36,4 @@ class Solution:
         for _, row in indices.items():
             res = max(res, row[-1] - row[0] - 1)
         return res if res != float('-inf') else -1
+

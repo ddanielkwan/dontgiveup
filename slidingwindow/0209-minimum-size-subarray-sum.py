@@ -33,3 +33,4 @@ class Solution:
         
         return minSize if minSize != float('inf') else 0
 
+

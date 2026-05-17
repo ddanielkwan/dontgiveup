@@ -62,3 +62,4 @@ class Solution:
         
         return len(heights)-1 #weve reached end
             
+

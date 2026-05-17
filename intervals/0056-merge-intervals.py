@@ -32,3 +32,4 @@ class Solution:
             else:
                 res.append([start,end])
         return res
+

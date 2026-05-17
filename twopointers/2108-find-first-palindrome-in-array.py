@@ -28,3 +28,4 @@ class Solution:
             if ispalindrome(word, 0, len(word)-1):
                 return word
         return ""
+

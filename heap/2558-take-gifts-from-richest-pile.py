@@ -36,3 +36,4 @@ class Solution:
             heapq.heappush(gifts, -reduced)   # put back
 
         return -sum(gifts)
+

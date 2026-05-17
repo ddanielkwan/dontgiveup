@@ -64,3 +64,4 @@ class Solution:
             i += direction 
         return "".join(res)
 
+

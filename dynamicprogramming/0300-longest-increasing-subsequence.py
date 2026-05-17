@@ -27,3 +27,4 @@ class Solution:
                 if nums[i] < nums[j]: #j comes after i
                     LIS[i] = max(LIS[i], 1+LIS[j])
         return max(LIS)
+

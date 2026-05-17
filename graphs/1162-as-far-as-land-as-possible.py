@@ -49,3 +49,4 @@ class Solution:
         if distance != float('-inf') and distance != 0:
             return distance
         return -1
+

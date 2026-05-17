@@ -43,3 +43,4 @@ class Solution:
                     q.append((index+1, "R"))
         return "".join(dominoes)
 
+

@@ -42,3 +42,4 @@ class Solution:
         even.next = None        # terminate even list
         odd.next = even_dummy.next  # connect odd list to even list
         return odd_dummy.next
+

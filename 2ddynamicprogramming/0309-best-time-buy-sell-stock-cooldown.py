@@ -60,3 +60,4 @@ class Solution:
                 return  cache[(i,hasStock)]
         return dfs(0,False)
         
+

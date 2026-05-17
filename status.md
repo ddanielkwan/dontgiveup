@@ -9,3 +9,15 @@ two pointers status
 
 sliding window status
 - count nice array
+
+
+
+May 16 Status
+- Arrays
+    - finished regular, need to go through starred and super
+`
+- Two Pointers
+    - finsihed regular
+
+- Sliding Window
+    - done regular

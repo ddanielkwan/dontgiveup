@@ -31,3 +31,4 @@ class Solution:
             t[0], t[1], t[2] = t[1], t[2] , sum(t)
         
         return t[-1]
+

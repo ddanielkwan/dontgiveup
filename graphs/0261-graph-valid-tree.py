@@ -41,3 +41,4 @@ class Solution:
         #if there is no cycle and we visited all nodes because we have apath to all
         return dfs(0, -1) and n == len(visited)
 
+

@@ -59,3 +59,4 @@ class Solution:
                 else:
                     return unique
         return len(freq)
+

@@ -65,3 +65,4 @@ class BrowserHistory:
     def forward(self, steps: int) -> str:
         self.cur = min(len(self.history) - 1, self.cur + steps)
         return self.history[self.cur]
+

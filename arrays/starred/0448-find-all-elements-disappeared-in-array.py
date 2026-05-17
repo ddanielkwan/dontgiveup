@@ -40,3 +40,4 @@ class Solution:
             if num > 0:
                 res.append(i+1) #+1 to get element
         return res
+

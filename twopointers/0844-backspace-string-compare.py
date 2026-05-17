@@ -29,21 +29,24 @@ class Solution:
                 if word[index] == "#":
                     backspace += 1
                 elif backspace > 0 :
-                    backspace -= 1
-                else:
+                    backspace -= 1 #just means were skipping the cahracter andnot doing anything
+                else: #we finsihed looking at backspaces
                     break
                 
                 index -= 1
             return index
+        #we need to start backwrads because they are deleting 
+        while sPointer >= 0 or tPointer >= 0: #must keep comparing until BOTH strings are fully processed, not stop when one finishes so use OR b
+            # becaeuase we eont know if they are equal
 
-        while sPointer >= 0 or tPointer >= 0: #must keep comparing until BOTH strings are fully processed, not stop when one finishes so use OR
-
+        #find next vlid pointer that is not "deleted"
             sPointer = nextValid(s, sPointer)
             tPointer = nextValid(t, tPointer)
 
+
             charS = s[sPointer] if sPointer >= 0 else ""
             charT = t[tPointer] if tPointer >= 0 else ""
-
+            #not equal false
             if charS != charT:
                 return False
 
@@ -53,3 +56,4 @@ class Solution:
 
         
         return True
+

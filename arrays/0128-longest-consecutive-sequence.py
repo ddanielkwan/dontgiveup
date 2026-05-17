@@ -34,3 +34,4 @@ class Solution:
                 longestConsecutiveElements = max(total,longestConsecutiveElements)
         return longestConsecutiveElements
         
+

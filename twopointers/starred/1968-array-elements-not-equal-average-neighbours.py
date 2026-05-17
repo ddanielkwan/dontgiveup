@@ -33,3 +33,4 @@ class Solution:
                 res.append(nums[r])
                 r -= 1
         return res
+

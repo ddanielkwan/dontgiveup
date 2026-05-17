@@ -43,3 +43,4 @@ class Solution:
         # - curr is None (we reached the end)
         # - prev is the new head of the reversed list
         return prev
+

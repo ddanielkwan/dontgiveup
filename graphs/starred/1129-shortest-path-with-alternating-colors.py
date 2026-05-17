@@ -70,3 +70,4 @@ class Solution:
                         q.append([nei,distance +1,"BLUE"])
             
         return ans
+

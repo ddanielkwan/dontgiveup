@@ -51,3 +51,4 @@ class Solution:
                 res.append(leftPointer)
                 
         return res
+

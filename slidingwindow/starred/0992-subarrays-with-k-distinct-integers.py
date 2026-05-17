@@ -38,3 +38,4 @@ class Solution:
             return res
         
         return countAtMostKDistinct(nums,k) - countAtMostKDistinct(nums, k - 1)
+

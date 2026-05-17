@@ -45,3 +45,4 @@ class Solution:
                 q.append((associate, t + informTime[associate]))
         
         return res
+

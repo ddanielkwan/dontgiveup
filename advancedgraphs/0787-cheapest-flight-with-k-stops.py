@@ -40,3 +40,4 @@ class Solution:
         return -1 if prices[dst] == float('inf') else prices[dst] 
                 
 
+

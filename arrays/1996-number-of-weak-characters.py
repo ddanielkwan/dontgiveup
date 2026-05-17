@@ -1,6 +1,13 @@
-# You are playing a game that contains multiple characters, and each of the characters has two main properties: attack and defense. You are given a 2D integer array properties where properties[i] = [attacki, defensei] represents the properties of the ith character in the game.
+# You are playing a game that contains multiple characters,
+#  and each of the characters has two main properties: attack and defense.
+#  You are given a 2D integer array properties 
+# where properties[i] = [attacki, defensei] represents the properties of
+#  the ith character in the game.
 
-# A character is said to be weak if any other character has both attack and defense levels strictly greater than this character's attack and defense levels. More formally, a character i is said to be weak if there exists another character j where attackj > attacki and defensej > defensei.
+# A character is said to be weak if any other character has
+#  both attack and defense levels strictly greater than this character's 
+# attack and defense levels. More formally, a character i is said to be 
+# weak if there exists another character j where attackj > attacki and defensej > defensei.
 
 # Return the number of weak characters.
 
@@ -29,7 +36,7 @@ class Solution:
         #sort second by ascendind defnse
 
         # properties = [[7,9], [5,3], [5,10], [5,7], [3,2]]
-
+        #becomes [[7,9], [5,3], [5,7], [5,10], [3,2]]
         #everything left of it we know has higher attack
         #we jsut keep track of max defnse
 
@@ -44,3 +51,4 @@ class Solution:
                 max_def = defense
         
         return count
+

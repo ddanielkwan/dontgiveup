@@ -52,3 +52,4 @@ class Solution:
                     curr = 1
 
         return curr
+

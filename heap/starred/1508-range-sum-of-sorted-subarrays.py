@@ -69,3 +69,4 @@ class Solution:
                 heapq.heappush(minHeap, (new_sum, end_index + 1))
 
         return res
+

@@ -27,3 +27,4 @@ class Solution:
         return len(wall) - max(gaps.values())
             
         
+

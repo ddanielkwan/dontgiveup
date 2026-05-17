@@ -50,3 +50,4 @@ class WordDictionary:
                 return dfs(index + 1, node.children[char])
 
         return dfs(0, self.root)
+

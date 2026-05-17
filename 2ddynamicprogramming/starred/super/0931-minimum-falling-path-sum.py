@@ -62,3 +62,4 @@ class Solution:
                 matrix[r][c] = matrix[r][c] + min(mid, left, right)
 
         return min(matrix[-1])
+

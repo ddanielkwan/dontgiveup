@@ -45,3 +45,4 @@ class Solution:
                 # because future j will only move left
 
         return maxRampWidth
+

@@ -35,3 +35,4 @@ class Solution:
                     current_row[i+1] += 0.5 * extra
             previous_row = current_row
         return min(1,previous_row[query_glass])
+

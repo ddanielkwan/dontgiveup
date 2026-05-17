@@ -55,3 +55,4 @@ class Solution:
             if node.right:
                 q.append([node.right, currentNumber * 2 + 1 , level + 1])
         return res
+

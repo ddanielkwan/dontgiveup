@@ -26,3 +26,4 @@ class Solution:
             return max(dfs(node.left) ,dfs(node.right)) + 1
         
         return dfs(root)
+

@@ -61,3 +61,4 @@ class Solution:
                 r = midPointA - 1
             else:
                 l = midPointA + 1
+

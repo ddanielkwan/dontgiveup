@@ -35,3 +35,4 @@ class Solution:
                 trappedWater += max(0, min(leftMax, rightMax) - height[r])
 
         return trappedWater
+

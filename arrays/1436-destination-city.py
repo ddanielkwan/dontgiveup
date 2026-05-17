@@ -24,3 +24,4 @@ class Solution:
         for item in paths:
             if item[1] not in prereq:
                 return item[1]
+

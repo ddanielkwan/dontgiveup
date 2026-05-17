@@ -40,3 +40,4 @@ class Solution:
             res.append(maxNumber)
         
         return res
+

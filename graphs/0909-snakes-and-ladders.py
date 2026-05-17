@@ -82,3 +82,4 @@ class Solution:
                     visited.add(nextSquare)
                     q.append((nextSquare, moves + 1))
         return -1
+

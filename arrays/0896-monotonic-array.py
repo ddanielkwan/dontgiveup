@@ -23,3 +23,4 @@ class Solution:
                 decreasing = False
 
         return increasing or decreasing
+

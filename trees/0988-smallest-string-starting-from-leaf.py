@@ -46,3 +46,4 @@ class Solution:
             if node.right:
                 q.append([node.right, chr(ord('a')+node.right.val) + string]) 
         return smallest
+

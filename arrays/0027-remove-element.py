@@ -36,3 +36,4 @@ class Solution:
                 pointer += 1
             
         return pointer
+

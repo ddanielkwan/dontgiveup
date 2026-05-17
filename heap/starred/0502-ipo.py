@@ -56,3 +56,4 @@ class Solution:
             w += -heapq.heappop(maxHeap)
 
         return w
+

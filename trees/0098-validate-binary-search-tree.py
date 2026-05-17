@@ -28,3 +28,4 @@ class Solution:
             
             return left and right
         return dfs(root, float('-inf'), float('inf'))
+

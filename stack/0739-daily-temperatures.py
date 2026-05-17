@@ -33,3 +33,4 @@ class Solution:
             stack.append([day, temperature])
         
         return answer
+

@@ -55,3 +55,4 @@ class MyCircularQueue:
 
     def isFull(self) -> bool:
         return self.space == 0
+

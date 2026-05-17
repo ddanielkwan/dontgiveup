@@ -20,28 +20,28 @@ class RandomizedSet:
     #5. update reference of that element to removal index
     #6. delete value from hashmap
     def __init__(self):
-        self.array = []
-        self.hashmap = {}
+        self.array = []  #stores val
+        self.hashmap = {} #stores val: index
         
 
     def insert(self, val: int) -> bool:
         status = val in self.hashmap
 
         if not status:
-            self.array.append(val)
-            self.hashmap[val] = len(self.array) - 1
+            self.array.append(val) #append first to array
+            self.hashmap[val] = len(self.array) - 1 #add index to hashmap
             return True
         
         return False
         
 
     def remove(self, val: int) -> bool:
-        if val in self.hashmap:
+        if val in self.hashmap: #if val is in hashmap, lets get removal index
             removalIndex = self.hashmap[val]
             replaceWithElement = self.array[-1]
 
             self.array[removalIndex] = replaceWithElement
-            self.array.pop()
+            self.array.pop() #o(1)
             
             self.hashmap[replaceWithElement] = removalIndex
 
@@ -54,3 +54,4 @@ class RandomizedSet:
     def getRandom(self) -> int:
         return random.choice(self.array)
         
+

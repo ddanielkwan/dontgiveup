@@ -45,3 +45,4 @@ class Solution:
         print(stack)
         #case where num = "10" k = 2, stack will be empty
         return "".join(stack) if stack else "0"
+

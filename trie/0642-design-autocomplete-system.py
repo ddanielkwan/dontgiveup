@@ -17,6 +17,8 @@ class TrieNode:
         #setenneces here will be used to count number of times ach sentence was type
 
     def add_to_trie(self, sentence, count):
+        # 
+# O(NL) and sentence inserted into L nodes so its larger
         node = self
         # so at node path "i lo" and "i l" these nodes etncnes will both have "i love you":5
         for c in sentence: #create trie nodes for all characters

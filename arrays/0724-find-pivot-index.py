@@ -29,3 +29,4 @@ class Solution:
             leftSum += nums[index]
         return -1
         
+

@@ -44,3 +44,4 @@ class Solution:
             
 
         return -1 if windowSize == -1 else len(nums) - windowSize
+

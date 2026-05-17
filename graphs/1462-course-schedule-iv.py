@@ -67,3 +67,4 @@ class Solution:
             res.append(u in prereqMap[v])
         return res
 
+

@@ -59,3 +59,4 @@ class Leaderboard:
 
     def reset(self, playerId: int) -> None:
         self.scores[playerId] = 0
+

@@ -45,3 +45,4 @@ class Solution:
                 num = 0
 
         return sum(stack)
+

@@ -13,3 +13,4 @@ class Solution:
             return rob2
         
         return max(nums[0],max(houserobberi(nums[1:]), houserobberi(nums[:-1])))
+

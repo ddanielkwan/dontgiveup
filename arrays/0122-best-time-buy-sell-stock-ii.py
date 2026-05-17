@@ -23,3 +23,4 @@ class Solution:
             if prices[i+1] > prices[i]:
                 profit += prices[i+1] - prices[i]
         return profit
+

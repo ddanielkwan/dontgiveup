@@ -1,4 +1,5 @@
-# A string can be shortened by replacing any number of non-adjacent, non-empty substrings with their lengths (without leading zeros).
+# A string can be shortened by replacing any number of non-adjacent, 
+# non-empty substrings with their lengths (without leading zeros).
 
 # For example, the string "implementation" can be abbreviated in several ways, such as:
 
@@ -37,10 +38,10 @@ class Solution:
         j = 0
 
         while i < n and j < m :
-            if abbr[j] == '0':
+            if abbr[j] == '0': #not valid 
                 return False
 
-            if word[i] == abbr[j]:
+            if word[i] == abbr[j]: #both letters are equal just proceed
                 i += 1
                 j += 1
             
@@ -49,10 +50,11 @@ class Solution:
             
             else: #abbr[j] is a digit and we need to find digit 
                 length = 0
-                while j < m and abbr[j].isdigit():
+                while j < m and abbr[j].isdigit(): #stops at letter
                     length = length * 10 + int(abbr[j])
                     j += 1
-                
+                #add the i pointer that many lengths and have next iteration if word[i] == abbr[j]: check it
                 i += length
         
-        return i == n and j == m
+        return i == n and j == m #to be valid they both need to end 
+

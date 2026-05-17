@@ -47,3 +47,4 @@ class Solution:
                 numberOfNiceArrays += (m-l) + 1
                 
         return numberOfNiceArrays
+

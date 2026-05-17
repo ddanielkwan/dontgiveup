@@ -24,3 +24,4 @@ class Solution:
                 res += prefixCount[diff]
             prefixCount[currentSum] += 1
         return res
+

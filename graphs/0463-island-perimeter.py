@@ -46,3 +46,4 @@ class Solution:
             for c in range(cols):
                 if grid[r][c] == 1: #we only need to run dfs once since one island is connected
                     return dfs(r,c)
+

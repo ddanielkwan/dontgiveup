@@ -44,3 +44,4 @@ class Solution:
         if not root:
             return False
         return self.isSubPath(head,root.left) or self.isSubPath(head, root.right)
+

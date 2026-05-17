@@ -33,3 +33,4 @@ class Solution:
         
         slow.next = slow.next.next if slow.next else None
         return head
+

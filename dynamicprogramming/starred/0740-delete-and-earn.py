@@ -62,3 +62,4 @@ class Solution:
 #                          everything about 1 and 2
 #                          you dont need them anymore
 # When you're at 4, asking "what happened at 1?" — you don't need to. earn2 already accounted for it.
+

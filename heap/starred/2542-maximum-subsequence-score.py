@@ -59,3 +59,4 @@ class Solution:
                 maxScore = max(maxScore, n1Sum * n2Min)
             
         return maxScore
+

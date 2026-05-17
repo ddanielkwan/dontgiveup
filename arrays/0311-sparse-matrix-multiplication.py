@@ -1,6 +1,7 @@
-# Given two sparse matrices mat1 of size m x k and mat2 of size k x n, return the result of mat1 x mat2. You may assume that multiplication is always possible.
+# Given two sparse matrices mat1 of size m x k and mat2 of size k x n,
+#  return the result of mat1 x mat2. You may assume that multiplication is always possible.
 
- 
+ #m x k and k x n results in m x n
 
 # Example 1:
 
@@ -16,6 +17,7 @@
 
 class Solution:
     def multiply(self, mat1: List[List[int]], mat2: List[List[int]]) -> List[List[int]]:
+        
         m, k, n = len(mat1), len(mat1[0]), len(mat2[0])
         result = [[0] * n for _ in range(m)]
         
@@ -27,3 +29,4 @@ class Solution:
                     result[i][l] += mat1[i][j] * mat2[j][l]
         
         return result
+

@@ -61,3 +61,4 @@ class Solution:
 
         return dfs(0) #dfs(0) represents the minimum number of transactions to settle all the debts.
         # dfs(1) represents the minimum number of transactions to settle the debts of all people except the firs
+

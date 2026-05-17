@@ -84,3 +84,4 @@ class Solution:
                     stack.append(node.right)
                     parents[node.right] = node
         return root
+

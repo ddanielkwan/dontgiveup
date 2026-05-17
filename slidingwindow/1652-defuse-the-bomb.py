@@ -41,3 +41,4 @@ class Solution:
                     res[(r+1)%n] = curr #right side will be sum before it 
         
         return res
+

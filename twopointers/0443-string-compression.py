@@ -45,7 +45,7 @@ class Solution:
 
                 # write count only if > 1
                 if count > 1:
-                    for digit in str(count):
+                    for digit in str(count): #count can be more than 1 digit .e.g 10 or 11 or 123
                         chars[insertPointer] = digit
                         insertPointer += 1
 
@@ -61,3 +61,4 @@ class Solution:
                 insertPointer += 1
 
         return insertPointer
+

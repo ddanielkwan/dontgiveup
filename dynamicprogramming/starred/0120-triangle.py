@@ -37,3 +37,4 @@ class Solution:
             for i, n in enumerate(row):
                 dp[i] = n + min(dp[i], dp[i+1]) #this index is pssible becase if you look from top, row 1 -> 0 index, row2 ->indices 0 and 1, since we do bottom up., btoom alwascalcualedfoirst
         return dp[0]
+

@@ -88,3 +88,4 @@ class Solution:
         # any remaining '(' in the stack are unmatched
         # Each one needs a ')' to be added
         return minMoves + len(stack)
+

@@ -57,3 +57,4 @@ class Solution:
             lists = stored
         
         return lists[0] if lists else None
+

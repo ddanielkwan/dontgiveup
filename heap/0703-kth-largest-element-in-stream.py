@@ -67,3 +67,4 @@ class KthLargest:
         # The smallest among them sits at index 0.
         # That smallest-of-the-top-k is exactly the kth largest overall.
         return self.nums[0]
+

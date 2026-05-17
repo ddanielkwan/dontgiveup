@@ -50,3 +50,4 @@ class Solution:
         alice_score = dfs(0, len(piles) - 1)
         return True if alice_score > total - alice_score else False
         
+

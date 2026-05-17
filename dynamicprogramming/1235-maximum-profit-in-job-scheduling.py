@@ -54,39 +54,39 @@ class Solution:
     
 
 
-    class Solution:
-    def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
+class Solution:
+def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
+    
+    #brute force bcak tracking + memo
+    #look at intervals, probably makes sense to sort by start time
+    #greedy won work here because there can be overalpping jobs with higther profit, wont know
+    #subproblems
+
+    intervals = sorted(zip(startTime,endTime,profit))
+
+    cache = {}
+    def dfs(i):
+        if i == len(intervals):
+            #no profit remaining
+            return 0
         
-        #brute force bcak tracking + memo
-        #look at intervals, probably makes sense to sort by start time
-        #greedy won work here because there can be overalpping jobs with higther profit, wont know
-        #subproblems
-
-        intervals = sorted(zip(startTime,endTime,profit))
-
-        cache = {}
-        def dfs(i):
-            if i == len(intervals):
-                #no profit remaining
-                return 0
-            
-            if i in cache:
-                return cache[i]
-            
-            #dont include
-            res = dfs(i+1)
-
-            #include
-            # j = i + 1
-            # while j < len(intervals):
-                #trying to fidn te max for overlapping intevvals
-                #because we can only do 1 job
-                #we can optimize with binary search
-                # if intervals[i][1] <= intervals[j][0]: #if end time of current interval is less than start time of new interval (find where these overlapping inntervals end)
-                #     break
-                # j += 1
-            j = bisect.bisect(intervals, (intervals[i][1], -1, -1))
-            cache[i] = max(res, intervals[i][2] + dfs(j))
+        if i in cache:
             return cache[i]
         
-        return dfs(0)
+        #dont include
+        res = dfs(i+1)
+
+        #include
+        # j = i + 1
+        # while j < len(intervals):
+            #trying to fidn te max for overlapping intevvals
+            #because we can only do 1 job
+            #we can optimize with binary search
+            # if intervals[i][1] <= intervals[j][0]: #if end time of current interval is less than start time of new interval (find where these overlapping inntervals end)
+            #     break
+            # j += 1
+        j = bisect.bisect(intervals, (intervals[i][1], -1, -1))
+        cache[i] = max(res, intervals[i][2] + dfs(j))
+        return cache[i]
+    
+    return dfs(0)

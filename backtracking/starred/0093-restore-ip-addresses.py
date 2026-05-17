@@ -41,3 +41,4 @@ class Solution:
                     backtrack(i +1, dots +1 , path+ segment + ".")
         backtrack(0,0,"")
         return res
+

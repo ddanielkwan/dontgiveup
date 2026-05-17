@@ -29,8 +29,8 @@ class Solution:
 
         threeSums = []
 
-        for index, value in enumerate(nums):
-            if index > 0 and nums[index-1] == value:
+        for index, value in enumerate(nums): #set as anchor as element[0] 
+            if index > 0 and nums[index-1] == value: #avoid duplicate triplets
                 continue
             
             left = index + 1
@@ -52,3 +52,4 @@ class Solution:
         return threeSums
 
     
+

@@ -91,7 +91,7 @@ class Solution:
         return board
     
 
-    class Solution:
+class Solution2:
     def candyCrush(self, board: List[List[int]]) -> List[List[int]]:
             #m x n array board
 
@@ -193,3 +193,4 @@ class Solution:
 
         
         return board
+

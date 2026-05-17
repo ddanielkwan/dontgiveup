@@ -38,3 +38,4 @@ class Solution:
 
         slow.val , first.val = first.val, slow.val
         return head
+

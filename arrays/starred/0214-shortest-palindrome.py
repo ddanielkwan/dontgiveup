@@ -95,3 +95,4 @@ class Solution:
         suffix = s[last_index+ 1:]
         return suffix[::-1] + s 
     
+

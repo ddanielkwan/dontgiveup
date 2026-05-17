@@ -83,3 +83,4 @@ class Solution:
             energy = max(energy + actual, minimum)
 
         return energy
+

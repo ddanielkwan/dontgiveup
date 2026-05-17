@@ -27,3 +27,4 @@ class Solution:
 
         dfs(root)
         return lca
+

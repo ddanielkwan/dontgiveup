@@ -13,11 +13,18 @@
 # [1,0,1,0,1]
 # [1,0,1,0,1]
 # [1,0,1,0,1]
+
+# if you jsut do regualr sliding note: we miss  Because the naive sliding window only keeps one left pointer position for each right point 
+# [1,0,1]      indices 0..2
+# [1,0,1,0]    indices 0..3
+# [0,1,0,1]    indices 1..4
 # Example 2:
+
 
 # Input: nums = [0,0,0,0,0], goal = 0
 # Output: 15
 
+#Because the naive sliding window only keeps one left pointer position for each right point
 class Solution:
     def numSubarraysWithSum(self, nums: list[int], goal: int) -> int:
         
@@ -37,9 +44,11 @@ class Solution:
                 curr += nums[r]
 
                 while curr > goal:
-                    curr -= nums[l]
+                    curr -= nums[l] 
                     l += 1
                 res += (r-l+1)
             return res
+        #numbero f subrays <=   goal -1 
         return helper(goal) - helper(goal-1)
         #limitation is beacuse tehre is 0, adding or subtracting 0 doesnt change sum
+

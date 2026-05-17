@@ -47,3 +47,4 @@ class Solution:
         return t if len(visited) == n else -1
 
             
+

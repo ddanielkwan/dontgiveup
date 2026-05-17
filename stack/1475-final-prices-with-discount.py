@@ -32,3 +32,4 @@ class Solution:
             stack.append([itemPrice, index])
         
         return finalPrices
+

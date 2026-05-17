@@ -1,4 +1,6 @@
-# Given a string s, partition the string into one or more substrings such that the characters in each substring are unique. That is, no letter appears in a single substring more than once.
+# Given a string s, partition the string into one or more substrings 
+# such that the characters in each substring are unique. 
+# That is, no letter appears in a single substring more than once.
 
 # Return the minimum number of substrings in such a partition.
 
@@ -20,10 +22,10 @@
 class Solution:
     #intuition : To minimize the number of substrings, each substring should be as long as possible greedy insight.
     #If you end a substring earlier than necessary, you only make future substrings shorter, which can never reduce the total count — it can only increase it.
-
+            #greedy
     #split string if we see duplicate character
     def partitionString(self, s: str) -> int:
-        
+            # “Keep extending the current substring until you are forced to stop
         res = 0
 
         seen = set()
@@ -35,3 +37,4 @@ class Solution:
             seen.add(character)
         
         return res + 1
+

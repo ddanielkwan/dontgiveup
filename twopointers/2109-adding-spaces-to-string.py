@@ -1,6 +1,9 @@
-# You are given a 0-indexed string s and a 0-indexed integer array spaces that describes the indices in the original string where spaces will be added. Each space should be inserted before the character at the given index.
+# You are given a 0-indexed string s and a 0-indexed integer array spaces that 
+# describes the indices in the original string where spaces will be added. 
+# Each space should be inserted before the character at the given index.
 
-# For example, given s = "EnjoyYourCoffee" and spaces = [5, 9], we place spaces before 'Y' and 'C', which are at indices 5 and 9 respectively. Thus, we obtain "Enjoy Your Coffee".
+# For example, given s = "EnjoyYourCoffee" and spaces = [5, 9], we place spaces
+#  before 'Y' and 'C', which are at indices 5 and 9 respectively. Thus, we obtain "Enjoy Your Coffee".
 # Return the modified string after the spaces have been added.
 
  
@@ -23,15 +26,17 @@ class Solution:
         res = []
 
         while i < len(s) and j < len(spaces):
-            if i < spaces[j]:
+            if i < spaces[j]: #normal do nothing just add to result array 
                 res.append(s[i])
                 i += 1
             
-            else: #if it is that index, drop the space
+            else: #if it is that index, drop the space and increment the spaces pointer
                 res.append(" ")
-                j += 1
+                j += 1 
+
         
-        if i < len(s): #remaining no spaces
+        if i < len(s): #remaining no spaces, edge case where there are no spaces but we havent iterated through entire string yet 
             res.append(s[i:])
         
         return "".join(res)
+

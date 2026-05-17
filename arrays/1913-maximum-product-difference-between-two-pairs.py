@@ -43,3 +43,4 @@ class Solution:
         print(firstSmallest, secondSmallest)
 
         return (firstLargest * secondLargest) - (firstSmallest * secondSmallest)
+

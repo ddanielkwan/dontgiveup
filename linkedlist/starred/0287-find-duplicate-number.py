@@ -34,3 +34,4 @@ class Solution:
             head = nums[head]
             if slow == head:
                 return slow
+

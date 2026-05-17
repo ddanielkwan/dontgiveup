@@ -21,3 +21,4 @@ class Solution:
             if tracker[i] == 2:
                 res[0] = i
         return res
+

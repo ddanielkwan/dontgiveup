@@ -48,6 +48,12 @@ class Solution:
                 # L started LEFT of where it needs to end up
             # Example: start:   L...index    0 result:  ..L.
             # # index    2
+        #             start:   L...
+        # index    0
+
+        # result:  ..L.
+        # index    2
+        #means l would need ot move right
             if start[i] == 'L' and i < j:
                 return False
             if start[i] == 'R' and i > j :

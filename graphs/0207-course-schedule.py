@@ -57,3 +57,4 @@ class Solution:
                 return False #if any of coruses cant be completed reutrn flase
         
         return True
+

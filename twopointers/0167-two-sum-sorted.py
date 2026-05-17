@@ -39,3 +39,4 @@ class Solution:
 
             else:
                 return [leftPointer + 1, rightPointer + 1]
+

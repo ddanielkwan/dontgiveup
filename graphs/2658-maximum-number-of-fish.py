@@ -50,3 +50,4 @@ class Solution:
                 maxFish = max(maxFish, dfs(r,c))
         
         return maxFish
+
