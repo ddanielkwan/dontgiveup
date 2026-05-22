@@ -28,18 +28,18 @@ class Solution:
 
         #step one populate everything
         idx = 0
-
+        # Step 1: Give every unique email an ID
         for accId, account in enumerate(accounts):
             for i in range(1,len(account)):
                 email = account[i]
                 if email in emailToIdx:
                     continue
                 emails.append(email)
-                emailToIdx[email] = idx
+                emailToIdx[email] = idx #this isemailindex
                 emailToAccId[idx] = accId
                 idx += 1
 
-        
+        # Step 2: Build graph connections
         adj = [[] for _ in range(idx)]
         for a in accounts:
             #connect all the emails
@@ -54,18 +54,18 @@ class Solution:
         
         emailGroup = defaultdict(list) # acc id -> list of emails, use for res
         visited = [False] * idx
-
+        # Step 3: DFS every unvisited email node
         def dfs(node, accId):
             visited[node] = True
             emailGroup[accId].append(emails[node])
             for nei in adj[node]:
                 if not visited[nei]:
                     dfs(nei, accId)
-        
+        # Step 4: Group emails by account/person
         for emailnode in range(idx):
             if not visited[emailnode]:
                 dfs(emailnode, emailToAccId[emailnode])
-        
+        # Step 5: Sort emails and build final answer
         res = []
         for accId in emailGroup:
             name = accounts[accId][0]

@@ -23,7 +23,7 @@ class Solution:
             curr = curr.next
         if not curr: #if 1>2>3 and n == 3 curr will be at null so the first elemnet has to die which means the Nth node from the end is the head itself
         #so we return head.next
-            return head.next
+            return head.next #this will return 2->3 
 
 
         slow = head

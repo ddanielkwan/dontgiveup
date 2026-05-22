@@ -24,6 +24,14 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         # To make amount a, what was the last coin I used?
+        # 
+        #for each coin, we want to detemrine what is fewest number of coins we need 
+        #to make up amount - coin
+
+        #
+#the state is dp[amount]
+
+        #we want tobuuld from low amout to amount
 
         dp = [amount+1] * (amount+1)
 

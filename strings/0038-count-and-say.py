@@ -37,8 +37,8 @@ class Solution:
                 i += 1
             return res
         current = "1"
-
-        for i in range(1, n):
+        #we alwaays start at 1 
+        for i in range(1, n): #we assume we know the fucntion
             current = nextSequence(current)
         
         return current

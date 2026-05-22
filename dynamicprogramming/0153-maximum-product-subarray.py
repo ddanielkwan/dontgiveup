@@ -30,9 +30,9 @@ class Solution:
 
         currentMin = 1
         currentMax = 1
-
+            #can not use the ones before it 
         for n in nums:
-            tmp = currentMin
+            tmp = currentMin 
             currentMin = min(n, n*currentMin, n*currentMax)
             currentMax = max(n, n * tmp, n*currentMax)
 

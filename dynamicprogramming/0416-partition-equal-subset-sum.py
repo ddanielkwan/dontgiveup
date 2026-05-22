@@ -1,4 +1,5 @@
-# Given an integer array nums, return true if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or false otherwise.
+# Given an integer array nums, return true if you can partition the array into two subsets 
+# such that the sum of the elements in both subsets is equal or false otherwise.
 
  
 
@@ -27,7 +28,7 @@ class Solution:
         #second step we see the key is index and target
         cache = {}
         def solve(index, target):
-            if target == 0:
+            if target == 0: 
                 return True
             if target < 0 or index == len(nums):
                 return False

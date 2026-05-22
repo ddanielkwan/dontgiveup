@@ -43,6 +43,16 @@ class Solution:
         #because we only care about the minimum(left value) and the maximum(right value) 
         #min(subsequence) + max(subsequence) ≤ target
         #similar to greedy, move right pointer if too big
+
+        #[3,3,6,8] target = 10
+        # [3] #now can we add 3? yes can we add 6? yes can we add 8? no
+        #[3,3,6]
+        #think ofit like a window
+
+        #[each we can include or not include]
+        #3,3
+        #3 33 36 336 #left elemnt isfixed
+
         for left_index, left_val in enumerate(nums):
             while (left_val+ nums[r]) > target and left_index <= r:
                 r -= 1

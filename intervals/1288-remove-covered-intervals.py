@@ -1,4 +1,5 @@
-# Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), remove all intervals that are covered by another interval in the list.
+# Given an array intervals where intervals[i] = [li, ri] represent the interval [li, ri), 
+# remove all intervals that are covered by another interval in the list.
 
 # The interval [a, b) is covered by the interval [c, d) if and only if c <= a and b <= d.
 
@@ -22,7 +23,7 @@ class Solution:
         #[[1,4], [2,8], [3,6]]
 
         intervals.sort(key = lambda x : (x[0], -x[1]))
-        #-x[1] means we want the largest first 
+        #-x[1] means we want the largest end first , and smallest begibnning
         #[1,5],[1,3],[1,2]
 
         remaining_intervals = len(intervals)

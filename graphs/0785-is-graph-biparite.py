@@ -1,10 +1,14 @@
-# There is an undirected graph with n nodes, where each node is numbered between 0 and n - 1. You are given a 2D array graph, where graph[u] is an array of nodes that node u is adjacent to. More formally, for each v in graph[u], there is an undirected edge between node u and node v. The graph has the following properties:
+# There is an undirected graph with n nodes, where each node is numbered between 0 and n - 1. 
+# You are given a 2D array graph, where graph[u] is an array of nodes that node u is adjacent to. 
+# More formally, for each v in graph[u], there is an undirected edge between node u and node v. 
+# The graph has the following properties:
 
 # There are no self-edges (graph[u] does not contain u).
 # There are no parallel edges (graph[u] does not contain duplicate values).
 # If v is in graph[u], then u is in graph[v] (the graph is undirected).
 # The graph may not be connected, meaning there may be two nodes u and v such that there is no path between them.
-# A graph is bipartite if the nodes can be partitioned into two independent sets A and B such that every edge in the graph connects a node in set A and a node in set B.
+# A graph is bipartite if the nodes can be partitioned into two independent sets A and B such that every edge in 
+# the graph connects a node in set A and a node in set B.
 
 # Return true if and only if it is bipartite.
 
@@ -20,13 +24,17 @@ class Solution:
         # -1 => color B
         color = [0] * len(graph)
 
+        #the question is saying confirm that each node's neighbour is diffeernt from current node
+
+        #we're going to use color as an array to keep track of difference
+
         def bfs(start: int) -> bool:
             # If this node is already colored, its component was handled before
-            if color[start] != 0:
+            if color[start] != 0: #it wouldve returned false if not biparite , if it has color means its safe so far 
                 return True
             q = deque([start])
 
-            # Assign an arbitrary color to the start node
+            # Assign an arbitrary color to the start node, because it doesnt matter
             color[start] = 1
 
 

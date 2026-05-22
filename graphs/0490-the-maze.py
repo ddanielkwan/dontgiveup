@@ -1,6 +1,9 @@
-# There is a ball in a maze with empty spaces (represented as 0) and walls (represented as 1). The ball can go through the empty spaces by rolling up, down, left or right, but it won't stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+# There is a ball in a maze with empty spaces (represented as 0) and walls (represented as 1).
+#  The ball can go through the empty spaces by rolling up, down, left or right, but it won't stop rolling until hitting a wall. 
+# When the ball stops, it could choose the next direction.
 
-# Given the m x n maze, the ball's start position and the destination, where start = [startrow, startcol] and destination = [destinationrow, destinationcol], return true if the ball can stop at the destination, otherwise return false.
+# Given the m x n maze, the ball's start position and the destination, 
+# where start = [startrow, startcol] and destination = [destinationrow, destinationcol], return true if the ball can stop at the destination, otherwise return false.
 
 # You may assume that the borders of the maze are all walls (see examples).
 
@@ -46,6 +49,7 @@ class Solution:
                 r = currentSpot[0]
                 c = currentSpot[1]
                 #potential next r,c if within bound and is empty space
+                #keep going until hits wall
                 while r >= 0 and r < rows and c >= 0 and c < cols and maze[r][c] == 0:
                     r += dirX[i]
                     c += dirY[i]

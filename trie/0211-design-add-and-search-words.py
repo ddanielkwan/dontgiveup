@@ -33,12 +33,13 @@ class WordDictionary:
     def search(self, word: str) -> bool:
         # use dfs to handle '.' wildcard
         def dfs(index, node):
-            if index == len(word):
+            if index == len(word): #return true if is end
                 return node.is_end
 
             char = word[index]
 
-            if char == '.':
+            if char == '.': #this is current, so we dont care whre we are now, if any of our children is true
+                #return true
                 # '.' matches any character — try all children
                 for child in node.children.values():
                     if dfs(index + 1, child):

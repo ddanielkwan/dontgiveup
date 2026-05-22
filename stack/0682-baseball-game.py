@@ -33,11 +33,11 @@ class Solution:
         stack = []
 
         for operation in operations:
-            if operation == "+":
+            if operation == "+": #add prev two scores
                 a, b = stack[-1], stack[-2]
                 stack.append(a+b)
             
-            elif operation == "D":
+            elif operation == "D": #RECORD A NEW double the last score
                 stack.append(stack[-1] * 2)
             
             elif operation == "C":

@@ -5,7 +5,8 @@
 # Delete the first digit and the closest non-digit character to its left.
 # Return the resulting string after removing all digits.
 
-# Note that the operation cannot be performed on a digit that does not have any non-digit character to its left.
+# Note that the operation cannot be performed on a digit that does not have any non-digit
+# character to its left.
 
  
 

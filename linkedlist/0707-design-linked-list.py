@@ -35,7 +35,8 @@ class MyLinkedList:
         while curr and index > 0:
             curr = curr.next
             index -= 1
-        #we dont want to return dummy, out of bounds and our index is 0 otherwise , loop may have exited before we reached index wwe wanted to reach, would happen if our linkedlist is toosmall
+        #we dont want to return dummy, out of bounds and our index is 0 otherwise ,
+        #  loop may have exited before we reached index wwe wanted to reach, would happen if our linkedlist is toosmall
         if curr and curr != self.right and index == 0:
             return curr.val
         

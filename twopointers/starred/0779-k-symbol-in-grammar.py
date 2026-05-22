@@ -34,8 +34,8 @@ class Solution:
         r = 2 ** (n - 1) #max
 
         #if you write down a tree for 0 becomes 01 and 1 becoemes 10
-        #youll notice that for each previous row, if you go left, the leemnet is the same
-        #if you got right thelement is not same
+        #youll notice that for each previous row, if you go left, the element is the same
+        #if you go right thelement is not same
         for _ in range(n - 1):
             mid = l + (r - l) // 2
 

@@ -1,6 +1,8 @@
-# Given a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]), return the next greater number for every element in nums.
+# Given a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]),
+#  return the next greater number for every element in nums.
 
-# The next greater number of a number x is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.
+# The next greater number of a number x is the first greater number to its traversing-order next in the array, 
+# which means you could search circularly to find its next greater number. If it doesn't exist, return -1 for this number.
 
  
 
@@ -15,7 +17,9 @@
 
 class Solution:
     def nextGreaterElements(self, nums: List[int]) -> List[int]:
-       
+        #we need to use a mono decreasing stack
+        #for current element, if stack and stack[-1] is less tahncurrent, we know that that index value result will be current 
+        #use stack and store index
         n = len(nums)
         result = [-1] * n
         stack = []  #indices
@@ -25,7 +29,7 @@ class Solution:
         for i in range(2 * n): #circular 
             while stack and nums[stack[-1]] < nums[i % n]:
                 result[stack.pop()] = nums[i%n]
-            if i < n :
+            if i < n : #we only want to push each index once 
                 stack.append(i)
         
         return result

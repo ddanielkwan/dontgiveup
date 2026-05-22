@@ -62,7 +62,7 @@ class Solution:
                         if newK == 0:
                             continue
                         newK -= 1 #mutating the k
-                    if (newR,newC, newK) in visited:
+                    if (newR,newC, newK) in visited: #Reaching the SAME cell with different remaining k are DIFFERENT states
                         continue
                     visited.add((newR,newC,newK))
                     q.append((newR,newC, newK))

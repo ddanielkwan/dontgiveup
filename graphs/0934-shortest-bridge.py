@@ -73,6 +73,7 @@ class Solution:
                     if row in range(rows) and col in range(cols) and (row,col) not in islandCoordinates:
                         if grid[row][col] == 1:
                             shortestPath = min(shortestPath, swap)
+                            #we can even optimize and return swap here since other runs irrelevant since shortest will alwys fidn first
 
                         q.append((row,col))
                         islandCoordinates.add((row,col))

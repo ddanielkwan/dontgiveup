@@ -14,19 +14,19 @@
 class Solution:
     def sortTransformedArray(self, nums, a, b, c):
 
-        def f(x):
+        def f(x): #helper method to caclulate quadratic
             return a*x*x + b*x + c
             #undersatnd parabola
             #a > 0 means right side
             #a < 0 means left side negative
         n = len(nums)
 
-        res = [0] * n
-
+        res = [0] * n #answer array
+        #two pointers left and right this will look at both side of nums
         left = 0
         right = n - 1
 
-        # where to fill
+        # where to fill, note : parabola if a <0 means negative and a >0 mean positive so largest on right
         idx = n - 1 if a >= 0 else 0
 
         while left <= right:
@@ -34,7 +34,7 @@ class Solution:
             left_val = f(nums[left])
             right_val = f(nums[right])
 
-            if a >= 0:
+            if a >= 0: #largest on right
 
                 # bigger goes at back
                 if left_val > right_val:

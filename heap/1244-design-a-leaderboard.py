@@ -1,8 +1,10 @@
 # Design a Leaderboard class, which has 3 functions:
 
-# addScore(playerId, score): Update the leaderboard by adding score to the given player's score. If there is no player with such id in the leaderboard, add him to the leaderboard with the given score.
+# addScore(playerId, score): Update the leaderboard by adding score to the given player's score.
+# If there is no player with such id in the leaderboard, add him to the leaderboard with the given score.
 # top(K): Return the score sum of the top K players.
-# reset(playerId): Reset the score of the player with the given id to 0 (in other words erase it from the leaderboard). It is guaranteed that the player was added to the leaderboard before calling this function.
+# reset(playerId): Reset the score of the player with the given id to 0 (in other words erase it from the leaderboard). 
+# It is guaranteed that the player was added to the leaderboard before calling this function.
 # Initially, the leaderboard is empty.
 
  
@@ -42,18 +44,32 @@ class Leaderboard:
         self.scores[playerId] += score
 
     def top(self, K: int) -> int:
-    
-        # o(nlogk) pop k times 
-        heap = [] #min heap
-        for val in self.scores.values():
-            heapq.heappush( heap,val)
-            if len(heap) > K :
-                heapq.heappop(heap)
-        
-        res = 0
-        while heap:
-            res += heapq.heappop(heap)
-        return res
+
+        heap = []  
+        # O(1)
+
+        for val in self.scores.values():  
+            # loops n times
+
+            heapq.heappush(heap, val)  
+            # O(log K)
+            # NOT log n because heap size is kept <= K+1
+
+            if len(heap) > K:  
+                # O(1)
+                heapq.heappop(heap)  
+                # O(log K)
+
+        res = 0  
+        # O(1)
+
+        while heap:  
+            # runs K times at most
+            res += heapq.heappop(heap)  
+            # each pop is O(log K)
+
+        return res  
+        # O(1)
 
 
 

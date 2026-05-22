@@ -1,4 +1,6 @@
-# Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
+# Given an array of integers temperatures represents the daily temperatures, 
+# return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. 
+# If there is no future day for which this is possible, keep answer[i] == 0 instead.
 
  
 
@@ -19,7 +21,8 @@
 class Solution:
     def dailyTemperatures(self, temperatures: list[int]) -> list[int]:
         
-        #keep a mono decreasing because we dont care if the next elements are smaller, but once we see a larger, we have to process until we cant anymore
+        #keep a mono decreasing because we dont care if the next elements are smaller,
+        #  but once we see a larger, we have to process until we cant anymore
         answer = [0] * len(temperatures)
 
         stack = [] #store index and temperature

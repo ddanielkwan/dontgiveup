@@ -1,10 +1,12 @@
-#     Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key's value at a certain timestamp.
+#Design a time-based key-value data structure that can store multiple values for the same key at different time stamps
+#  and retrieve the key's value at a certain timestamp.
 
 # Implement the TimeMap class:
 
 # TimeMap() Initializes the object of the data structure.
 # void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.
-# String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev <= timestamp. If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns "".
+# String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev <= timestamp. 
+# If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns "".
 
 
 from collections import defaultdict
@@ -13,15 +15,18 @@ from collections import defaultdict
 class TimeMap:
 
     def __init__(self):
+        #key and store an arary
+        # key : [(timestamp, value), (timestamp2,value2)]
 
         self.store = defaultdict(list)
         
 
     def set(self, key: str, value: str, timestamp: int) -> None:
-        self.store[key].append([timestamp, value])
+        self.store[key].append([timestamp, value]) #set is simple
         
 
     def get(self, key: str, timestamp: int) -> str:
+        #get shoudl be binary search, if timestamp does not exist in key list, return the closest smallesst one to it
     
         res = ""
         if key not in self.store:
@@ -29,7 +34,8 @@ class TimeMap:
 
         l = 0
         r = len(self.store[key]) - 1
-        row = self.store[key]
+        row = self.store[key] #get the array 
+        
         while l <= r :
 
             m = l + (r-l)//2 

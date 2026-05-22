@@ -1,6 +1,7 @@
 # We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i], obtaining a profit of profit[i].
 
-# You're given the startTime, endTime and profit arrays, return the maximum profit you can take such that there are no two jobs in the subset with overlapping time range.
+# You're given the startTime, endTime and profit arrays, 
+# return the maximum profit you can take such that there are no two jobs in the subset with overlapping time range.
 
 # If you choose a job that ends at time X you will be able to start another job that starts at time X.
 
@@ -34,19 +35,26 @@ class Solution:
             
             if i in cache:
                 return cache[i]
-            
+            #at eachstage you can either choose the job or not choose the job
+
+
             #dont include
             res = dfs(i+1)
 
-            #include
+            #include 
+            #if we want to include the job 
             j = i + 1
             while j < len(intervals):
                 #trying to fidn te max for overlapping intevvals
                 #because we can only do 1 job
                 #we can optimize with binary search
+                #    3 - 5
+                #2 - 3
+                #.   ^ here is where intersection ends
                 if intervals[i][1] <= intervals[j][0]: #if end time of current interval is less than start time of new interval (find where these overlapping inntervals end)
                     break
                 j += 1
+                #were including it intervals[i][2] + every possible option if for dfs(j)
             cache[i] = max(res, intervals[i][2] + dfs(j))
             return cache[i]
         

@@ -1,4 +1,5 @@
-# An n x n grid is composed of 1 x 1 squares where each 1 x 1 square consists of a '/', '\', or blank space ' '. These characters divide the square into contiguous regions.
+# An n x n grid is composed of 1 x 1 squares where each 1 x 1 square consists of a '/', '\', or blank space ' '.
+#  These characters divide the square into contiguous regions.
 
 # Given the grid grid represented as a string array, return the number of regions.
 
@@ -24,18 +25,38 @@ class Solution:
 
         grid2 = [[0] * cols2 for _ in range(rows2)]
 
+    # 0 1 0 1
+    # 1 0 1 0
+    # 0 1 0 0
+    # 1 0 0 0
 
+    # This incorrectly merges some regions through corner-touching
+    #becuase dfs cwe cant travel diagonally 
+
+    # 3×3 expansion
+
+    # Final grid:
+
+    # 0 0 1 0 0 1
+    # 0 1 0 0 1 0
+    # 1 0 0 1 0 0
+    # 0 0 1 0 0 0
+    # 0 1 0 0 0 0
+    # 1 0 0 0 0 0
         for r in range(rows1):
             for c in range(cols1):
+                
                 r2, c2 = r * 3 , c * 3 
                 if grid[r][c] == "/":
-                    grid2[r2][c2+2] = 1
-                    grid2[r2+1][c2+1] = 1
-                    grid2[r2+2][c2] = 1
+                    grid2[r2][c2+2] = 1 #top right
+                    grid2[r2+1][c2+1] = 1 #middle
+                    grid2[r2+2][c2] = 1 #bottom left
+
+                #this is the 3x3 box
                 elif grid[r][c] == "\\":
-                    grid2[r2][c2] = 1
-                    grid2[r2+1][c2+1] = 1
-                    grid2[r2+2][c2+2] = 1
+                    grid2[r2][c2] = 1 #top left
+                    grid2[r2+1][c2+1] = 1 #middle
+                    grid2[r2+2][c2+2] = 1 #bottom right
 
         def dfs(r,c, visited):
             if r < 0 or c <0 or r>=rows2 or c >= cols2 or grid2[r][c] == 1 or (r,c) in visited:

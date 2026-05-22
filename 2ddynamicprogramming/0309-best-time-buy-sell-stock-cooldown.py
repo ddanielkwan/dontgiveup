@@ -42,8 +42,8 @@ class Solution:
             
             if (i, hasStock) in cache:
                 return cache[(i,hasStock)]
-            
-            idle = dfs(i+1, hasStock)
+            #3 options
+            idle = dfs(i+1, hasStock) #do nothing
 
             if not hasStock:
                 #opt 2 : buy stock

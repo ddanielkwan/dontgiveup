@@ -14,7 +14,7 @@
 
 
 # Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
-# Output: true
+# Output: true  
 # Explanation: One way to obtain s3 is:
 # Split s1 into s1 = "aa" + "bc" + "c", and s2 into s2 = "dbbc" + "a".
 # Interleaving the two splits, we get "aa" + "dbbc" + "bc" + "a" + "c" = "aadbbcbcac".

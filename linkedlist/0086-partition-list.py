@@ -7,8 +7,8 @@
 # Example 1:
 
 
-# Input: head = [1,4,3,2,5,2
-
+# Input: head = [1,4,3,2,5,2], x = 3
+# Output: [1,2,2,4,3,5]
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -27,7 +27,7 @@ class Solution:
         left = ListNode()
         right = ListNode()
 
-        leftTail = left
+        leftTail = left #these are the iterators
         rightTail = right
 
         curr = head #just loop and add to whichever

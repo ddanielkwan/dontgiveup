@@ -15,8 +15,8 @@
 class MinStack:
 
     def __init__(self):
-        self.stack = []
-        self.minstack = []
+        self.stack = [] #regular value
+        self.minstack = [] #stores the min we've seen so far
         
 
     def push(self, val: int) -> None:
@@ -26,7 +26,7 @@ class MinStack:
             if self.minstack[-1] > val:
                 self.minstack.append(val)
             else:
-                self.minstack.append(self.minstack[-1])
+                self.minstack.append(self.minstack[-1]) #continue with current min 
         else:
             self.minstack.append(val)
         

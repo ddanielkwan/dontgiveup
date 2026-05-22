@@ -1,6 +1,7 @@
 # You are given a 2D integer array intervals where intervals[i] = [lefti, righti] represents the inclusive interval [lefti, righti].
 
-# You have to divide the intervals into one or more groups such that each interval is in exactly one group, and no two intervals that are in the same group intersect each other.
+# You have to divide the intervals into one or more groups such that each interval is in exactly one group,
+#  and no two intervals that are in the same group intersect each other.
 
 # Return the minimum number of groups you need to make.
 
@@ -31,7 +32,9 @@ class Solution:
         for l ,r in intervals:
             start.append(l)
             end.append(r)
-
+        #this is similar to meeting rooms, howmany meetings rooms we msut have
+        #think of a plotting this in a sweeeping line
+        #
 
         start.sort()
         end.sort()

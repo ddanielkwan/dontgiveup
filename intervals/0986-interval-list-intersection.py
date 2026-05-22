@@ -1,11 +1,14 @@
 
-# You are given two lists of closed intervals, firstList and secondList, where firstList[i] = [starti, endi] and secondList[j] = [startj, endj]. Each list of intervals is pairwise disjoint and in sorted order.
+# You are given two lists of closed intervals,
+#  firstList and secondList, where firstList[i] = [starti, endi] and secondList[j] = [startj, endj]. 
+# Each list of intervals is pairwise disjoint and in sorted order.
 
 # Return the intersection of these two interval lists.
 
 # A closed interval [a, b] (with a <= b) denotes the set of real numbers x with a <= x <= b.
 
-# The intersection of two closed intervals is a set of real numbers that are either empty or represented as a closed interval. For example, the intersection of [1, 3] and [2, 4] is [2, 3].
+# The intersection of two closed intervals is a set of real numbers that are either empty or represented as a closed interval. 
+# For example, the intersection of [1, 3] and [2, 4] is [2, 3].
 
  
 
@@ -37,23 +40,24 @@ class Solution:
         # return res
 
         #line sweep
-        # store = defaultdict(int)
-        # for s, e in firstList:
-        #     store[s] += 1
-        #     store[e + 1] -= 1 #this interval just ended, we dont want e = -1 because e is inclusive
-        # for s, e in secondList:
-        #     store[s] += 1
-        #     store[e + 1] -= 1
+        store = defaultdict(int)
+        for s, e in firstList:
+            store[s] += 1
+            store[e + 1] -= 1 #this interval just ended, we dont want e = -1 because e is inclusive
+        for s, e in secondList:
+            store[s] += 1
+            store[e + 1] -= 1
 
-        # res = []
-        # active = 0
-        # prev = None
-        # for x in sorted(store):
-        #     if active == 2:
-        #         res.append([prev, x - 1])
-        #     active += store[x]
-        #     prev = x #Because after processing position x, you need to remember where the next potential intersection would start
-        # return res
+        res = []
+        active = 0
+        prev = None
+        for x in sorted(store):
+            if active == 2:
+                res.append([prev, x - 1])
+            active += store[x]
+            prev = x #Because after processing position x, 
+            # you need to remember where the next potential intersection would start
+        return res
 
 
         #two pointers

@@ -1,6 +1,8 @@
-# You are given the head of a linked list, which contains a series of integers separated by 0's. The beginning and end of the linked list will have Node.val == 0.
+# You are given the head of a linked list, which contains a series of integers separated by 0's. 
+# The beginning and end of the linked list will have Node.val == 0.
 
-# For every two consecutive 0's, merge all the nodes lying in between them into a single node whose value is the sum of all the merged nodes. The modified list should not contain any 0's.
+# For every two consecutive 0's, merge all the nodes lying in between them into a single node whose value
+#  is the sum of all the merged nodes. The modified list should not contain any 0's.
 
 # Return the head of the modified linked list.
 
@@ -31,11 +33,13 @@ class Solution:
 
         tail = dummy
         # 0,3,1,0,4,5,2,0] because last node
-        while curr.next:
-            node = ListNode(0)
+        while curr.next: #we use curr.next because beginning node 0, doesnt matter, and end node doesnt matter
+            #so if we reach end node 0, since it doesnst ahve curr,enxt we stop
+            node = ListNode(0) #create a new node
             while curr.next.val != 0:
                 node.val += curr.next.val
                 curr = curr.next
+            # node = 4 
             tail.next = node
             tail = tail.next
 

@@ -1,8 +1,10 @@
-# You are given a positive integer array skill of even length n where skill[i] denotes the skill of the ith player. Divide the players into n / 2 teams of size 2 such that the total skill of each team is equal.
+# You are given a positive integer array skill of even length n where skill[i] denotes the skill of the ith player.
+#  Divide the players into n / 2 teams of size 2 such that the total skill of each team is equal.
 
 # The chemistry of a team is equal to the product of the skills of the players on that team.
 
-# Return the sum of the chemistry of all the teams, or return -1 if there is no way to divide the players into teams such that the total skill of each team is equal.
+# Return the sum of the chemistry of all the teams,
+#  or return -1 if there is no way to divide the players into teams such that the total skill of each team is equal.
 
  
 
@@ -24,8 +26,11 @@ class Solution:
         total = sum(skill) #total skills
 
         # There are n players and n/2 teams
+
+
         # if every team has the same total skill:
         # we solve for each team skill sum
+        #  
         #   (team sum) × (number of teams) = total skill
         #   team_sum × (n / 2) = total
         #   team_sum = (2 × total) / n
@@ -40,6 +45,9 @@ class Solution:
         count = Counter(skill)
 
         # we aim for this target for each team/pair
+        #nubmer of teams = n/2
+        #target =   total/teams
+        # 2total/teams
         target = (2 * total) // len(skill)  #number of players
 
         res = 0  # store total chemistry

@@ -1,6 +1,8 @@
 # Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
 
-# According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+# According to the definition of LCA on Wikipedia: 
+# “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as 
+# descendants (where we allow a node to be a descendant of itself).”
 
  
 
@@ -27,19 +29,20 @@ class Solution:
 
             if not node:
                 return
-            
+            #they split 
             if p.val < node.val < q.val or q.val < node.val < p.val:
                 return node
-
+            #one of them is higher than other, we have toreturn
             if node.val == p.val :
 
                 return node
             if node.val == q.val:
 
                 return node
-
+            #go right both of them are larger
             if node.val < p.val and node.val < q.val:
                 return dfs(node.right, p, q)        
+            #go left
             if node.val > p.val and node.val > q.val:
                 return dfs(node.left, p, q)
         return dfs(root,p , q)

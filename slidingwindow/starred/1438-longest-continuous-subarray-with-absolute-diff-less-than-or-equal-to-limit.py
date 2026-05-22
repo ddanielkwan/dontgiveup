@@ -9,8 +9,8 @@ from typing import List
 
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        maxq = deque()
-        minq = deque()
+        maxq = deque() #mono decreasing queue
+        minq = deque() #mono increasing
 
 
         res = 0
@@ -26,7 +26,7 @@ class Solution:
             minq.append(nums[r])
             maxq.append(nums[r])
 
-            while maxq[0] - minq[0] > limit:
+            while maxq[0] - minq[0] > limit: #less than or equual to is valid window
                 if nums[l] == maxq[0]:
                     maxq.popleft()
                 if nums[l] == minq[0]:

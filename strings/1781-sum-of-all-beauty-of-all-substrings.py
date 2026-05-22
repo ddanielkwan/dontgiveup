@@ -29,8 +29,21 @@ class Solution:
         # cd
         # d
 
+        #algorithm
 
-        ans = 0
+        #we will have to go through all substrings anyways
+        #abcd
+        #a, ab , abc, abcd
+        #b, bc, bcd
+        #c, cd
+        #d
+
+        # there will be two for loops, this wont be a window , instead we can keep track of tracker array since 26 elements
+        #add freqnecy each time, and perofrm max and min of each substring, this is constant time
+
+        
+
+        ans = 0 
         for i in range(len(s)):
             freq = [0] * 26
             for j in range(i, len(s)): #these two for loops makes all substrigns

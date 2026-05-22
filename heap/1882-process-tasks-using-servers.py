@@ -66,7 +66,7 @@ class Solution:
             # we must fast-forward time to when the next server becomes free
             if len(availableServers) == 0:
                 t = unavailableServers[0][0]
-
+    
             # move all servers that are now free into availableServers
             while unavailableServers and t >= unavailableServers[0][0]:
                 nextTime, serverWeight, serverIndex = heapq.heappop(unavailableServers)

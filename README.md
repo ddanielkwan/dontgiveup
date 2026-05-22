@@ -7,6 +7,8 @@ Arrays
 
 - Running Sum
 - Prefix/Suffix
+- keep tracking of prefix from up and left
+
 - swap
 - keep track of the compliement inside a hashmapn
 
@@ -24,6 +26,7 @@ Sliding Window
 - add latest element to window
 - fix window
 - measure window
+- you dont need to only move left, you can also fix left and move rih
 - do we need to sort?
 - be careful about where you place your measuring code, inside condition or after, be careful
 - you can use queue as secondary DS
@@ -50,6 +53,7 @@ Linked List
 
 Trees
 - dfs , bfs
+- dfs for iterative for post order you need visited set
 - you can store more than 1 , 2 elements like 3 elemnts in bfs 
 - dfs and bfs remember that you can add more parameters and it doesnt have to only be one 
 - each level processing
@@ -57,15 +61,21 @@ Trees
 
 Heap
 - we can use min or max
+- ineed reepeated access to smalllest or largest or bet availbel
 - we can add more than one value
-- priority
+- priority, we usualyl use in parallel with queeues
 - double heaps
     
 Graphs
 - dfs, bfs
+- for bfs, it doesnt have to be node, it can be state e.g like boardgame, like string from 000 to 001, like locks, anytin can be. node
 - you can cache reults
 - topological sort
 Intervals
+- for intervals a lot of times you compare with prev
+- also some are greedy
+- w can also use a tree to compare intervals
+- we can use the hashmap to store when starts ends e.g [1,5] -> hashmap hashmap[1] = 1 hashmap[6] = -1
 
 
 Dynamic Programming 1D
@@ -75,6 +85,9 @@ Dynamic Programming 1D
 
 DP 2D
 - tabulation(bottom up) although the loop is from top, at every stage you want to ask yourself, [r][c] where did i come from? what is the condtion from previous to now?
+- were alwys jjust populatin something
+- sometimes if its asking for 1 v 1 like alice vs bob or robot 1 vs robot 2,
+you canthink of making dfs for one person optimally 
 
 Ask yourself: "do I know the base case immediately?"
 Base case is obvious/small → Bottom-up

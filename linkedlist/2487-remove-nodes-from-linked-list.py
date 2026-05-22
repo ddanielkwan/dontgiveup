@@ -48,7 +48,13 @@ class Solution:
         #  dummy is a traversal pointer
         # We will move dummy, but we must NOT lose newHead
         dummy = newHead
-
+        # [5,2,13,3,8]
+        #8,3,13,2,5
+        #^
+        #8 , 13
+        #.   ^
+        #8,13
+    
         while dummy and dummy.next:
             if dummy.next.val < dummy.val: #next is smaller than current, means right side is larger, then we skip the next
                 dummy.next = dummy.next.next

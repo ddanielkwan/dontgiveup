@@ -1,4 +1,6 @@
-# Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+# Given two strings s and t of lengths m and n respectively, 
+# return the minimum window substring of s such that every character in t (including duplicates) is included in the window.
+#  If there is no such substring, return the empty string "".
 
 # The testcases will be generated such that the answer is unique.
 
@@ -21,33 +23,33 @@ from collections import defaultdict
 
 #brute. force
 
-class Solution: #o(n^2 * m)
-    def minWindow(self, s: str, t: str) -> str:
-        if t == "":
-            return ""
+# class Solution: #o(n^2 * m)
+#     def minWindow(self, s: str, t: str) -> str:
+#         if t == "":
+#             return ""
 
-        countT = {}
-        for c in t:
-            countT[c] = 1 + countT.get(c, 0)
+#         countT = {}
+#         for c in t:
+#             countT[c] = 1 + countT.get(c, 0)
 
-        res, resLen = [-1, -1], float("infinity")
-        for i in range(len(s)):
-            countS = {}
-            for j in range(i, len(s)):
-                countS[s[j]] = 1 + countS.get(s[j], 0)
+#         res, resLen = [-1, -1], float("infinity")
+#         for i in range(len(s)):
+#             countS = {}
+#             for j in range(i, len(s)):
+#                 countS[s[j]] = 1 + countS.get(s[j], 0)
 
-                flag = True
-                for c in countT:
-                    if countT[c] > countS.get(c, 0):
-                        flag = False
-                        break
+#                 flag = True
+#                 for c in countT:
+#                     if countT[c] > countS.get(c, 0):
+#                         flag = False
+#                         break
 
-                if flag and (j - i + 1) < resLen:
-                    resLen = j - i + 1
-                    res = [i, j]
+#                 if flag and (j - i + 1) < resLen:
+#                     resLen = j - i + 1
+#                     res = [i, j]
 
-        l, r = res
-        return s[l : r + 1] if resLen != float("infinity") else ""
+#         l, r = res
+#         return s[l : r + 1] if resLen != float("infinity") else ""
     
 class Solution: #o(n+m)
     def minWindow(self, s: str, t: str) -> str:

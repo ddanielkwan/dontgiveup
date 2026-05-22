@@ -28,8 +28,8 @@ class Solution:
         if not root:
             return ""
 
-        smallest = None
-        q = deque()
+        smallest = None #global vairalbe
+        q = deque() #sttore node, current string
         #we use chr(ord('a') + node.val) to convert the node’s number (0–25) into its corresponding lowercase letter ('a' to 'z')
 
         q.append((root, chr(root.val + ord('a'))))
@@ -37,7 +37,7 @@ class Solution:
         while q :
             node, string = q.popleft()
 
-            if not node.left and not node.right:
+            if not node.left and not node.right: #we have to make sure it is the last node
                 if not smallest or string < smallest:
                     smallest = string
             

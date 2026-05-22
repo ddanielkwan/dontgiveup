@@ -1,4 +1,5 @@
-# Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:
+# Suppose an array of length n sorted in ascending order is rotated between 1 and n times. 
+# For example, the array nums = [0,1,2,4,5,6,7] might become:
 
 # [4,5,6,7,0,1,2] if it was rotated 4 times.
 # [0,1,2,4,5,6,7] if it was rotated 7 times.
@@ -39,7 +40,7 @@ class Solution:
                     r = m - 1
                 else:
                     l = m + 1
-            else:
+            else: #nums m < nums l  #6,7,1,2,3,4,5
                 if nums[r] > nums[m]:
                     r = m - 1
                 else:

@@ -1,4 +1,5 @@
-# You are given two positive integer arrays spells and potions, of length n and m respectively, where spells[i] represents the strength of the ith spell and potions[j] represents the strength of the jth potion.
+# You are given two positive integer arrays spells and potions, of length n and m respectively, 
+# where spells[i] represents the strength of the ith spell and potions[j] represents the strength of the jth potion.
 
 # You are also given an integer success. A spell and potion pair is considered successful if the product of their strengths is at least success.
 
@@ -20,6 +21,8 @@
 class Solution:
     def successfulPairs(self, spells: list[int], potions: list[int], success: int) -> list[int]:
         
+        #for each spell, do a binary search on potions to see success
+
         potions.sort()
         potionsLength = len(potions)
 
@@ -35,9 +38,12 @@ class Solution:
 
                 m = l + (r-l)//2
 
-                if potions[m] * spell >= success:
+                if potions[m] * spell >= success: 
+ 
+                    r = m - 1 #we do m - 1 because , we are no trying to find a successful potion,
+                    #we want to find the FIRST successful potion,because its sorted so if we find that location,
+                    #we know every other potion will also succeed
 
-                    r = m - 1
                 else:
                     l = m + 1
             #l ends up pointing at the first successful potion index, itll keep moving, if not then itll be potionlength

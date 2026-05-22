@@ -1,6 +1,8 @@
-# A conveyor belt has packages that must be shipped from one port to another within days days.
+# A conveyor belt has packages that must be shipped from one port to another within d days.
 
-# The ith package on the conveyor belt has a weight of weights[i]. Each day, we load the ship with packages on the conveyor belt (in the order given by weights). We may not load more weight than the maximum weight capacity of the ship.
+# The ith package on the conveyor belt has a weight of weights[i]. 
+# Each day, we load the ship with packages on the conveyor belt (in the order given by weights). 
+# We may not load more weight than the maximum weight capacity of the ship.
 
 # Return the least weight capacity of the ship that will result in all the packages on the conveyor belt being shipped within days days.
 
@@ -50,13 +52,13 @@ class Solution:
             daysTaken = 1
 
             for weight in weights:
-                if capacityLeft - weight < 0 :
+                if capacityLeft - weight < 0 : #we know that if we add this package to this ship, ship doesnt have enough
+                    #we need to send out our ship first, get new ship wiht fresh capacity
                     daysTaken += 1
                     capacityLeft = capacity
 
                 capacityLeft -= weight
             
-
 
             if daysTaken > days:
                 l = capacity + 1

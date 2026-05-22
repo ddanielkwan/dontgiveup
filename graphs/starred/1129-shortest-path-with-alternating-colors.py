@@ -48,6 +48,7 @@ class Solution:
 
         q = deque()
         q.append((0, 0, None)) #node, distancetook to get here, prevcolor
+        
         visited = set()
         visited.add((0,None)) #node, color came from
 

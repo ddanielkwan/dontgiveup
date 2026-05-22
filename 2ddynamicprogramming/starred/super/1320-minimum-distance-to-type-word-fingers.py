@@ -69,6 +69,8 @@ class Solution:
                 # option 1: move current finger to nxt
                 # In option 1, the current finger moved to type nxt. The other finger didn't move at all — it's still sitting exactly where it was.
 # So the "other" finger's position is unchanged, meaning we pass the same other column to dp[i+1].
+#               if other means the other finger
+#           this means we use current finger not other finger 
                 option1 = dist(current, nxt) + dp[i + 1][other]
 
                 # option 2: move other finger to nxt
@@ -92,4 +94,6 @@ class Solution:
 
     #o n x 27
     #o n space
+
+
 

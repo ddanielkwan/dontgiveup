@@ -43,7 +43,9 @@ class Solution:
 # nums[l] can reach up to nums[l] + k
 # nums[r] can reach down to nums[r] - k
 
-# For their ranges to overlap, you need:
+# For their ranges to overlap, you need: if k = 2
+#think of it like this,  [ 1, 2], farthest 1 can go is [-1,3], farthest 2 can go is [0, 4]
+#our current window is [1,2] if 0 <= 3 intersect then
 # nums[r] - k  <=  nums[l] + k
 # nums[r] - nums[l]  <=  2k
         for r in range(len(nums)):

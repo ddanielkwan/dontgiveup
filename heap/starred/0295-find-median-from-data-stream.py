@@ -1,4 +1,5 @@
-# The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.
+# The median is the middle value in an ordered integer list. If the size of the list is even, 
+# there is no middle value, and the median is the mean of the two middle values.
 
 # For example, for arr = [2,3,4], the median is 3.
 # For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5.
@@ -51,6 +52,9 @@ class MedianFinder:
         #case where unbalanced heap but order satisfy left < right
         # left = [1,2,3] right = [4] #we want at least 1 not 2 diff
 
+
+        #[3,2,1], [4]
+        #[2,1], [3,4]
         if len(self.left) > len(self.right) + 1:
             val = -heapq.heappop(self.left)
             heapq.heappush(self.right, val)

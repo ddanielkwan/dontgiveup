@@ -32,7 +32,7 @@ class Solution:
             if end < n:
                 ans[end] -= seats
 
-
+        #prefix sum
         for i in range(1,n):
             ans[i] += ans[i-1]
         

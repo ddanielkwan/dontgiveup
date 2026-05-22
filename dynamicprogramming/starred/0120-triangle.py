@@ -1,6 +1,7 @@
 # Given a triangle array, return the minimum path sum from top to bottom.
 
-# For each step, you may move to an adjacent number of the row below. More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row.
+# For each step, you may move to an adjacent number of the row below.
+# More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row.
 
  
 
@@ -35,6 +36,9 @@ class Solution:
 
         for row in triangle[::-1]:
             for i, n in enumerate(row):
-                dp[i] = n + min(dp[i], dp[i+1]) #this index is pssible becase if you look from top, row 1 -> 0 index, row2 ->indices 0 and 1, since we do bottom up., btoom alwascalcualedfoirst
+                #this is top down
+                #bottom row is 0 000 thts why + 1 trainagel
+                dp[i] = n + min(dp[i], dp[i+1]) 
+                #this index is pssible becase if you look from top, row 1 -> 0 index, row2 ->indices 0 and 1, since we do bottom up., btoom alwascalcualedfoirst
         return dp[0]
 

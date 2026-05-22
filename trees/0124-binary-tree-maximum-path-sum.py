@@ -1,4 +1,5 @@
-# A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
+# A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them.
+#  A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
 
 # The path sum of a path is the sum of the node's values in the path.
 
@@ -26,6 +27,9 @@ class Solution:
         res = root.val
 
         def dfs(root):
+            #were going to have 2 things
+            #1. our return will be best single path(with no split) going upwards
+            #2. there will be caclulaiotn each iteration for leftmax + rightmax + root.val
             nonlocal res
             if not root:
                 return 0

@@ -72,6 +72,8 @@ class Solution:
 # i=3  [  1,   0,   0,   0,   0,   0  ]  ← using NO coins (base case)
         n = len(coins)
         coins.sort()
+
+        #i is amount the second dimension is index?
         dp = [[0] * (amount + 1) for _ in range(n + 1)]
 
         for i in range(n + 1):
@@ -80,8 +82,8 @@ class Solution:
         for i in range(n - 1, -1, -1):
             for a in range(amount + 1):
                 if a >= coins[i]:
-                    dp[i][a] = dp[i + 1][a]
-                    dp[i][a] += dp[i][a - coins[i]]
+                    dp[i][a] = dp[i + 1][a] #skip this coin number of combinations if skip
+                    dp[i][a] += dp[i][a - coins[i]] #number of combinations if not skip
 
         return dp[0][amount]
 

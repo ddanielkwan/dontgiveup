@@ -35,7 +35,10 @@ class Solution:
             nonlocal res
             if not node:
                 return
-            
+            #going downwards
+            # 3 -> 4 -> 5
+            #3 si good, 4 is good, 5 is good
+            #prevmax is 3 prev max is 4 ..
             if node.val >= maxValue:
                 res += 1
             maxValue = max(node.val, maxValue)

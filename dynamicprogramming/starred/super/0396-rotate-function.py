@@ -1,6 +1,7 @@
 # You are given an integer array nums of length n.
 
-# Assume arrk to be an array obtained by rotating nums by k positions clock-wise. We define the rotation function F on nums as follow:
+# Assume arrk to be an array obtained by rotating nums by k positions clock-wise. 
+# We define the rotation function F on nums as follow:
 
 # F(k) = 0 * arrk[0] + 1 * arrk[1] + ... + (n - 1) * arrk[n - 1].
 # Return the maximum value of F(0), F(1), ..., F(n-1).
@@ -35,7 +36,12 @@ class Solution:
 
         ans = curr
 
-    
+        # [4,3,2,6] 0*4 + 1*3 + 2*2 + 3*6
+        # to
+        # [6,4,3,2] what changed? the coefficient 0*6 + 1*4 + 2*3 + 3*2
+        
+        #so the math is  total is what we expected to add on every iteratiton
+        #but if you look closesly, the last element gets removed to 0, so nums[-k] * 
         for k in range(1, n):
             curr = curr + total - n * nums[-k]
             ans = max(ans, curr)

@@ -4,7 +4,8 @@
 
 # The garden consists of n flowers, the ith flower will bloom in the bloomDay[i] and then can be used in exactly one bouquet.
 
-# Return the minimum number of days you need to wait to be able to make m bouquets from the garden. If it is impossible to make m bouquets return -1.
+# Return the minimum number of days you need to wait to be able to make m bouquets from the garden. 
+# If it is impossible to make m bouquets return -1.
 
  
 
@@ -55,8 +56,8 @@ class Solution:
 
             return bouquets >= m
 
-        left = min(bloomDay)
-        right = max(bloomDay)
+        left = min(bloomDay) #What is the earliest possible day ANY flower exists?
+        right = max(bloomDay) #latest day , wrose case
 
         res = -1
 

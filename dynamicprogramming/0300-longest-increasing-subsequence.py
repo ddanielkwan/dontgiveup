@@ -26,5 +26,9 @@ class Solution:
             for j in range(i+1, len(nums)): #go forward
                 if nums[i] < nums[j]: #j comes after i
                     LIS[i] = max(LIS[i], 1+LIS[j])
+                    #   
+                    # 1,2,4,3
+                    # LIS[3] = 1
+                    #LIS[2] can be itself, or + LIS[3] if nums[3] > nums[2]
         return max(LIS)
 

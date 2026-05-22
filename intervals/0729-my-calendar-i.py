@@ -37,18 +37,18 @@ class Tree: #tree (10,15) , and if candidate  (15,20) has to go right (5,10) goe
     def insert(self, start, end):
         curr = self
         while True:
-            if start >= curr.end:
+            if start >= curr.end: #were safe go right,
                 if not curr.right:
                     curr.right = Tree(start,end)
                     return True
                 curr = curr.right
-            elif end <= curr.start:
+            elif end <= curr.start: #were safe go left
                 if not curr.left:
                     curr.left = Tree(start,end)
                     return True
 
                 curr = curr.left
-            else:
+            else: #there is a merge return false
                 return False
 
 

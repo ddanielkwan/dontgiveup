@@ -1,6 +1,7 @@
 # Given a binary tree root and an integer target, delete all the leaf nodes with value target.
 
-# Note that once you delete a leaf node with value target, if its parent node becomes a leaf node and has the value target, it should also be deleted (you need to continue doing that until you cannot).
+# Note that once you delete a leaf node with value target, if its parent node becomes a leaf node and has the value target, 
+# it should also be deleted (you need to continue doing that until you cannot).
 
  
 
@@ -57,8 +58,9 @@ class Solution:
 
         visit = set()
 
-        parents = {root : None}
-
+        parents = {root : None} #keep track of parents
+        # A stack naturally gives you the node BEFORE its children are fully processed
+        #So iterative postorder needs a way to say, come back later
         while stack:
             node = stack.pop()
             #check leaf node
@@ -73,8 +75,8 @@ class Solution:
                         p.left = None
                     if p.right == node:
                         p.right = None
-            elif node not in visit:
-                visit.add(node) #we need visit because of post processing, process child first
+            elif node not in visit: #all nodes will hit this condtion first 
+                visit.add(node) #<---- this is importsant we need visit because of post processing, process child first
                 stack.append(node)
                 if node.left:
                     stack.append(node.left)

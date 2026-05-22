@@ -1,6 +1,9 @@
-# You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi] represent the start and the end of the ith interval and intervals is sorted in ascending order by starti. You are also given an interval newInterval = [start, end] that represents the start and end of another interval.
+# You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi] 
+# represent the start and the end of the ith interval and intervals is sorted in ascending order by starti. 
+# You are also given an interval newInterval = [start, end] that represents the start and end of another interval.
 
-# Insert newInterval into intervals such that intervals is still sorted in ascending order by starti and intervals still does not have any overlapping intervals (merge overlapping intervals if necessary).
+# Insert newInterval into intervals such that intervals is still sorted in ascending order by 
+# starti and intervals still does not have any overlapping intervals (merge overlapping intervals if necessary).
 
 # Return intervals after the insertion.
 
@@ -23,25 +26,25 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         # #linear o(n) search
-        # n = len(intervals)
-        # i = 0
-        # res = []
-        # #while new interval's endtime isless than start time
-        # while i < n and intervals[i][1] < newInterval[0]:
-        #     res.append(intervals[i])
-        #     i += 1
-        # #iterate all large rand merge
-        # while i < n and newInterval[1] >= intervals[i][0]:
-        #     newInterval[0] = min(newInterval[0], intervals[i][0])
-        #     newInterval[1] = max(newInterval[1], intervals[i][1])
-        #     i += 1
-        # res.append(newInterval)
-        # #add remaining
-        # while i < n:
-        #     res.append(intervals[i])
-        #     i += 1
+            # n = len(intervals)
+            # i = 0
+            # res = []
+            # #while new interval's endtime isless than start time
+            # while i < n and intervals[i][1] < newInterval[0]:
+            #     res.append(intervals[i])
+            #     i += 1
+            # #iterate all large rand merge
+            # while i < n and newInterval[1] >= intervals[i][0]:
+            #     newInterval[0] = min(newInterval[0], intervals[i][0])
+            #     newInterval[1] = max(newInterval[1], intervals[i][1])
+            #     i += 1
+            # res.append(newInterval)
+            # #add remaining
+            # while i < n:
+            #     res.append(intervals[i])
+            #     i += 1
 
-        # return res
+            # return res
 
 
         #binary searchb ut still o(n) cause merge

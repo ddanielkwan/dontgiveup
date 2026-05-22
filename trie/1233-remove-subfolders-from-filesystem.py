@@ -38,7 +38,8 @@ class Trie:
             #cant look at last one why?
             curr = curr.children[folders[i]]
             if curr.endoffolder:
-                return True
+                return True #if yes then current folder is a subfolder
+            #going through the apth, and if we already see endoffolder that its theres already. parent
         return False
 
 class Solution:

@@ -1,4 +1,6 @@
-# You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+# You are given two non-empty linked lists representing two non-negative integers.
+#  The most significant digit comes first and each of their nodes contains a single digit.
+#  Add the two numbers and return the sum as a linked list.
 
 # You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
@@ -11,6 +13,9 @@
 # Output: [7,8,0,7]
 
 
+# 7 -> 2 ->4 ->3
+#      5 ->6 ->4
+
 
 
 # Definition for singly-linked list.
@@ -20,6 +25,9 @@
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+
+        #we have to reverse it first both of them
+        #step 1 
         def reverseList(head):
             prev, curr = None, head
             while curr:
@@ -33,7 +41,7 @@ class Solution:
         l2 = reverseList(l2)
         head = None
         carry = 0
-
+        #same as add two nubmers i
         while l1 or l2 or carry:
             v1 = l1.val if l1 else 0
             v2 = l2.val if l2 else 0

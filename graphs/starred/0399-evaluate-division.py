@@ -44,7 +44,7 @@ class Solution:
 
         #a/b src = a , path starting at a and get to b and multiple weiht of all edges
         def bfs(src, target):
-            if src not in adj or target not in adj:
+            if src not in adj or target not in adj: #[x,x ] does not exist [z,b] z does not exist
                 return -1
             q, visit = deque(), set()
             q.append([src, 1]) #second vlue is the multiplication
@@ -62,7 +62,24 @@ class Solution:
                         visit.add(nei)
             return -1
 
-        
+        #update as of may 2026
+        #intution:
+        #a/b = 2 , b/c = 3
+
+        #what is a/c ?
+
+        #treat each letter as node
+        #a -> b
+        #edge here is 2
+        #b -> c edge here is 3
+
+        #a/b x b/c => 2x3
+
+        #from a 2-> b 3-> c each move we multiply the edge
+        #so a-b-c = 6 
+
+        #now backwards if c-b-a ? divide 1/value
+
         return [bfs(q[0],q[1]) for q in queries]
 
 

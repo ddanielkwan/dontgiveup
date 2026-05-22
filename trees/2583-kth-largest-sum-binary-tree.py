@@ -44,7 +44,7 @@ class Solution:
                     q.append(node.right)
                 
             heapq.heappush(minHeap, levelSum)
-            if len(minHeap) > k:
+            if len(minHeap) > k: #pops smallest so we knoe hat the k smallest will eventauly be minheap[0]
                 heapq.heappop(minHeap)
         #kthlargest
         return -1 if len(minHeap) < k else minHeap[0]

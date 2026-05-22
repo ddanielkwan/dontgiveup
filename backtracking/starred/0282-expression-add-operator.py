@@ -1,4 +1,6 @@
-# Given a string num that contains only digits and an integer target, return all possibilities to insert the binary operators '+', '-', and/or '*' between the digits of num so that the resultant expression evaluates to the target value.
+# Given a string num that contains only digits and an integer target, 
+# return all possibilities to insert the binary operators '+', '-', and/or '*' between the digits of num so 
+# that the resultant expression evaluates to the target value.
 
 # Note that operands in the returned expressions should not contain leading zeros.
 
@@ -47,6 +49,8 @@ class Solution:
 
             # Choose the next number, then try every operator
             for j in range(index, n): #e.g 1234, all possible numbers 2, 23, 234..
+                #this jsut means if its more than 1 digit, it has not strt with 0
+                #this loop goes through all index
                 if j > index and num[index] == "0": #digit has to be at least 1 digit, remove leading zero "05" "0003"
                     break
                 currStr = num[index:j+1]
@@ -54,21 +58,28 @@ class Solution:
 
                 if index == 0:
                     #first case first number cannot ahve anything cant be "+1+2
+                    #so just continue
                     dfs(j + 1, currStr, currNum, currNum)
                 else:
+                    #NOTE: THE PREV IS ALWAYS SIGNED SO NEGATIVE OR POSTIVE
+                    #addition, just add value with current
                     dfs(j + 1,
                         expression + "+" + currStr,
                         value + currNum,
                         currNum)
-
+                    #subtracting just do value - current
                     dfs(j + 1,
                         expression + "-" + currStr,
                         value - currNum,
                         -currNum)
-
+                    #multiplication more complicant thats why we needed prev 
                     # handle multiplication precedence
+                    # e.g 1 + 2 * 3
+                    #if we added 1 + 2 already
+                    #we now
+                    #so we need to do 1 - +(2*3) 
                     dfs(j + 1, #index
-                        expression + "*" + currStr, #expression
+                        expression + "*" + currStr, #expression normal as add and subtract
                         value - prev + (prev * currNum), #value remove previous term
 # add multiplied version instead
                         prev * currNum) #prev

@@ -1,4 +1,7 @@
-# # In a string composed of 'L', 'R', and 'X' characters, like "RXXLRXRXL", a move consists of either replacing one occurrence of "XL" with "LX", or replacing one occurrence of "RX" with "XR". Given the starting string start and the ending string result, return True if and only if there exists a sequence of moves to transform start to result.
+# # In a string composed of 'L', 'R', and 'X' characters, like "RXXLRXRXL",
+# a move consists of either replacing one occurrence of "XL" with "LX", or
+#  replacing one occurrence of "RX" with "XR". Given the starting string start and the 
+# ending string result, return True if and only if there exists a sequence of moves to transform start to result.
 
  
 
@@ -33,6 +36,11 @@ class Solution:
         i = j = 0
         if start.replace("X", "") != result.replace("X", ""):
             return False
+        
+        
+
+        #two pointers
+        #i to scan start j to scan result
         while (i < n and j < n ):
             while i < n and start[i] == 'X':
                 i += 1
@@ -40,21 +48,18 @@ class Solution:
                 j += 1
             
             #i and j are indices representing next occurence of non x
-            if i == n or j == n :
+            if i == n or j == n : #if both finished true
                 return i == n and j == n 
-            
+            #if the next non X character is not equal return False
             if start[i] != result[j]:
                 return False
-                # L started LEFT of where it needs to end up
-            # Example: start:   L...index    0 result:  ..L.
-            # # index    2
-        #             start:   L...
-        # index    0
 
-        # result:  ..L.
-        # index    2
-        #means l would need ot move right
-            if start[i] == 'L' and i < j:
+            #L can only move Left
+            #R can only move right
+            #so if our start is at .L..
+            #but if our result is at ..L.
+            #do you see that, this is not possible because the result we want L is to the right side, and we cant move to the right
+            if start[i] == 'L' and i < j: 
                 return False
             if start[i] == 'R' and i > j :
                 return False

@@ -1,6 +1,10 @@
-# Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle, and the last position is connected back to the first position to make a circle. It is also called "Ring Buffer".
+# Design your implementation of the circular queue.
+#  The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle, 
+# and the last position is connected back to the first position to make a circle. It is also called "Ring Buffer".
 
-# One of the benefits of the circular queue is that we can make use of the spaces in front of the queue. In a normal queue, once the queue becomes full, we cannot insert the next element even if there is a space in front of the queue. But using the circular queue, we can use the space to store new values.
+# One of the benefits of the circular queue is that we can make use of the spaces in front of the queue. 
+# In a normal queue, once the queue becomes full, we cannot insert the next element even if there is a space in front of the queue.
+#  But using the circular queue, we can use the space to store new values.
 
 # Implement the MyCircularQueue class:
 
@@ -29,6 +33,9 @@ class MyCircularQueue:
 
     def enQueue(self, value: int) -> bool:
         if self.isFull(): return False
+        #l <-> 5 <-> 7 <-> r
+        #insert 9 , curr = 9.next = r 9.prev = r.prev
+        #then adjust the right and right prev
         cur = ListNode(value, self.right, self.right.prev)
         self.right.prev.next = cur
         self.right.prev = cur
@@ -38,7 +45,10 @@ class MyCircularQueue:
     def deQueue(self) -> bool:
         if self.isEmpty(): return False
         self.left.next = self.left.next.next
-        self.left.next.prev = self.left
+        # left    5 <-> 7 <-> 9 <-> right
+        #     \
+        #     -> 7
+        self.left.next.prev = self.left #this makes 7 point to left 
         self.space += 1
         return True
 

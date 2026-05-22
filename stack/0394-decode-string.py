@@ -1,8 +1,13 @@
 # Given an encoded string, return its decoded string.
 
-# The encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated exactly k times. Note that k is guaranteed to be a positive integer.
+# The encoding rule is: k[encoded_string],
+#  where the encoded_string inside the square brackets is being repeated exactly k times.
+#  Note that k is guaranteed to be a positive integer.
 
-# You may assume that the input string is always valid; there are no extra white spaces, square brackets are well-formed, etc. Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k. For example, there will not be input like 3a or 2[4].
+# You may assume that the input string is always valid;
+#  there are no extra white spaces, square brackets are well-formed, etc. 
+# Furthermore, you may assume that the original data does not contain any digits and that digits are only for those repeat numbers, k. 
+# For example, there will not be input like 3a or 2[4].
 
 # The test cases are generated so that the length of the output will never exceed 105.
 
@@ -22,6 +27,8 @@ class Solution:
         #we have to process the latest one we see
         #so we need to use a stack
         #e.g 3[a2[c]] we see 3 so we go inside, but we see 2, so we have to go inside again
+        #suddenly we see ] this means we need to start processing what we had before and append to stack
+
 
         stack = []
 
@@ -30,7 +37,7 @@ class Solution:
                 pattern = ""
                 while stack and stack[-1] != "[":
                     alphabet = stack.pop()
-                    pattern = alphabet + pattern
+                    pattern = alphabet + pattern #add in front
                 
                 #now we found the pattern lets make sure to remove "["
                 stack.pop()
@@ -40,10 +47,10 @@ class Solution:
                 while stack and stack[-1].isdigit():
                     repeat = stack.pop() + repeat
                 
-                repeat = int(repeat)
+                repeat = int(repeat) #turn to int
                 
                 #add back to stack
-                stack.append(repeat * pattern)
+                stack.append(repeat * pattern) 
             else:
                 stack.append(character)
         

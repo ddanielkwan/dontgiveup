@@ -62,7 +62,7 @@ class Solution:
 
         def dfs(node):
             for child in node.children.values():
-                if child.eow:
+                if child.eow: #we can only go if child is eow
                     if len(child.word) > len(self.result) or (len(child.word) == len(self.result) and child.word < self.result):
                         self.result = child.word
                     dfs(child)  # only recurse if valid word end

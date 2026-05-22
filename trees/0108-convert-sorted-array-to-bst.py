@@ -24,3 +24,4 @@ class Solution:
             return root
         return helper(0, len(nums)-1)
 
+#left subtree < root < right subtree    

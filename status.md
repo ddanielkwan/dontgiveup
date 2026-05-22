@@ -21,3 +21,47 @@ May 16 Status
 
 - Sliding Window
     - done regular
+
+- Stack
+    - done regular
+
+- Binary Search
+    - regular
+
+- Linked List
+    - done
+
+- Trees
+    - regular
+
+- Heaps
+    - yup
+
+
+- 1D Dynamic Programming
+    - need to review some
+
+- Intervals 
+    - yes
+
+- 2D DP
+    - no
+
+- Greedy
+    - yeah
+
+- Advanced Graphs
+
+- Tries
+    - sure?
+
+- Backtracking
+
+
+- Graphs
+    - stars and regular
+
+- Math and Geometry
+    - sure
+
+
