@@ -1,7 +1,10 @@
 
-# Given a list of folders folder, return the folders after removing all sub-folders in those folders. You may return the answer in any order.
+# Given a list of folders folder, return the folders after removing all sub-folders in those folders. 
+# You may return the answer in any order.
 
-# If a folder[i] is located within another folder[j], it is called a sub-folder of it. A sub-folder of folder[j] must start with folder[j], followed by a "/". For example, "/a/b" is a sub-folder of "/a", but "/b" is not a sub-folder of "/a/b/c".
+# If a folder[i] is located within another folder[j], it is called a sub-folder of it. 
+# A sub-folder of folder[j] must start with folder[j], followed by a "/". 
+# For example, "/a/b" is a sub-folder of "/a", but "/b" is not a sub-folder of "/a/b/c".
 
 # The format of a path is one or more concatenated strings of the form: '/' followed by one or more lowercase English letters.
 
@@ -30,12 +33,12 @@ class Trie:
         curr.endoffolder= True
 
 
-    def prefix_search(self, path):
+    def hasparent(self, path):
         #idea: does this path have a parent folder already marked as complete?
         curr = self
         folders = path.split("/")
         for i in range(len(folders)-1):
-            #cant look at last one why?
+            #cant look at last one why? because it woudl alwahs be true because weinserted ourselves
             curr = curr.children[folders[i]]
             if curr.endoffolder:
                 return True #if yes then current folder is a subfolder
@@ -68,7 +71,7 @@ class Solution:
 
         res = []
         for f in folder:
-            if not trie.prefix_search(f):
+            if not trie.hasparent(f):
                 res.append(f)
 
         return res

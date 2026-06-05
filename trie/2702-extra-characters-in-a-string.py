@@ -1,4 +1,6 @@
-# You are given a 0-indexed string s and a dictionary of words dictionary. You have to break s into one or more non-overlapping substrings such that each substring is present in dictionary. There may be some extra characters in s which are not present in any of the substrings.
+# You are given a 0-indexed string s and a dictionary of words dictionary.
+#  You have to break s into one or more non-overlapping substrings such that each substring is present in dictionary.
+#  There may be some extra characters in s which are not present in any of the substrings.
 
 # Return the minimum number of extra characters left over if you break up s optimally.
 
@@ -8,13 +10,15 @@
 
 # Input: s = "leetscode", dictionary = ["leet","code","leetcode"]
 # Output: 1
-# Explanation: We can break s in two substrings: "leet" from index 0 to 3 and "code" from index 5 to 8. There is only 1 unused character (at index 4), so we return 1.
+# Explanation: We can break s in two substrings: "leet" from index 0 to 3 and "code" from index 5 to 8. 
+# There is only 1 unused character (at index 4), so we return 1.
 
 # Example 2:
 
 # Input: s = "sayhelloworld", dictionary = ["hello","world"]
 # Output: 3
-# Explanation: We can break s in two substrings: "hello" from index 3 to 7 and "world" from index 8 to 12. The characters at indices 0, 1, 2 are not used in any substring and thus are considered as extra characters. Hence, we return 3.
+# Explanation: We can break s in two substrings: "hello" from index 3 to 7 and "world" from index 8 to 12. 
+# he characters at indices 0, 1, 2 are not used in any substring and thus are considered as extra characters. Hence, we return 3.
 
 
 class Solution:
@@ -43,10 +47,56 @@ class Solution:
             res = 1 + dfs(i +1) #skip this char
             #
             #option 2 : is abc in dictionary
-            for j in range(i, len(s)):
-                if s[i:j+1] in dictionary: #it is in dictionary so go to next one
+            for j in range(i, len(s)): #o(n^2) n loop iterations
+                if s[i:j+1] in dictionary: #slicing is o(n)
+                    #it is in dictionary so go to next one 
                     res = min(res,dfs(j+1))#start at next index of the word after
             
             cache[i] = res
             return res
+        return dfs(0)
+    
+
+#does the same thing
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.isWord = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def addWord(self, word):
+        curr = self.root
+        for c in word:
+            if c not in curr.children:
+                curr.children[c] = TrieNode()
+            curr = curr.children[c]
+        curr.isWord = True
+
+class Solution2:
+    def minExtraChar(self, s: str, dictionary: List[str]) -> int:
+        trie = Trie()
+        for w in dictionary:
+            trie.addWord(w)
+
+        dp = {len(s): 0}
+
+        def dfs(i): #same thing
+            if i in dp:
+                return dp[i]
+            res = 1 + dfs(i + 1)
+            curr = trie.root
+            #---
+            for j in range(i, len(s)): #because we are already walking char by char
+                if s[j] not in curr.children: #no valid path for "leetscode" this is also more efficient than s[i:j+1]
+                    break
+                curr = curr.children[s[j]]
+                if curr.isWord:
+                    res = min(res, dfs(j + 1))
+            #--
+            dp[i] = res
+            return res
+
         return dfs(0)

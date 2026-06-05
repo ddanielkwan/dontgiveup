@@ -2,7 +2,8 @@
 
 # Return the minimum number of characters that need to be appended to the end of s so that t becomes a subsequence of s.
 
-# A subsequence is a string that can be derived from another string by deleting some or no characters without changing the order of the remaining characters.
+# A subsequence is a string that can be derived from another string by deleting some or no characters without changing
+#  the order of the remaining characters.
 
 
 class Solution:

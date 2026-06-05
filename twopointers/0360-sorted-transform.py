@@ -1,4 +1,6 @@
-# Given a sorted integer array nums and three integers a, b and c, apply a quadratic function of the form f(x) = ax2 + bx + c to each element nums[i] in the array, and return the array in a sorted order.
+# Given a sorted integer array nums and three integers a, b and c, 
+# apply a quadratic function of the form f(x) = ax2 + bx + c to each element nums[i] in the array, and 
+# return the array in a sorted order.
 
  
 
@@ -34,7 +36,7 @@ class Solution:
             left_val = f(nums[left])
             right_val = f(nums[right])
 
-            if a >= 0: #largest on right
+            if a >= 0: #[16,4,4,16] when a is postiive, the values on the end are large, so we are comparing which ones are largest to put at end
 
                 # bigger goes at back
                 if left_val > right_val:
@@ -47,8 +49,9 @@ class Solution:
                 idx -= 1
 
             else:
+                    # [-16,-4,-4,-16] when a is negative, value on end are smallest, so we are comparing which ones to put on left pointer
 
-                # smaller goes at front
+
                 if left_val < right_val:
                     res[idx] = left_val
                     left += 1

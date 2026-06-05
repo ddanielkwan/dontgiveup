@@ -3,7 +3,8 @@
 # When the ball stops, it could choose the next direction.
 
 # Given the m x n maze, the ball's start position and the destination, 
-# where start = [startrow, startcol] and destination = [destinationrow, destinationcol], return true if the ball can stop at the destination, otherwise return false.
+# where start = [startrow, startcol] and destination = [destinationrow, destinationcol], 
+# return true if the ball can stop at the destination, otherwise return false.
 
 # You may assume that the borders of the maze are all walls (see examples).
 

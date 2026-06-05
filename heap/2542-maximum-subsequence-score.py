@@ -15,7 +15,7 @@
 
 # Input: nums1 = [1,3,3,2], nums2 = [2,1,3,4], k = 3
 # Output: 12
-# Explanation: 
+# Explanation:      
 # The four possible subsequence scores are:
 # - We choose the indices 0, 1, and 2 with score = (1+3+3) * min(2,1,3) = 7.
 # - We choose the indices 0, 1, and 3 with score = (1+3+2) * min(2,1,4) = 6. 
@@ -27,7 +27,8 @@ class Solution:
     def maxScore(self, nums1: List[int], nums2: List[int], k: int) -> int:
         #  nums1 = [1,3,3,2], nums2 = [2,1,3,4], k = 3
         #note that if k = 3 , then the min that is possible can only be either 2 or 1
-        #in that case, since the minimum at doesnt change if you have more for examlike like [5,4,3,2,1] min is still 2 if you choose(5,3,2) or (4,3,2)
+        #in that case, since the minimum at doesnt change if you have more for examlike like 
+        # [5,4,3,2,1] min is still 2 if you choose(5,3,2) or (4,3,2)
         #so then the second problem becomes, in numbers in n1, which ones are largest?
         #we use heap to pop smallest from num1
 

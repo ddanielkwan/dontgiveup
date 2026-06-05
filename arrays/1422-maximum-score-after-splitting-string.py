@@ -30,7 +30,7 @@ class Solution:
 
         result = 0
 
-        for i in range(len(s)-1):
+        for i in range(len(s)-1): #cannot count last index  011101| 
             if s[i] == "0":
                 zeroes += 1
             else : #"0 11101" we are substracting ones because its like splitting, this is similar to pivot index

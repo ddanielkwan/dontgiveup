@@ -1,4 +1,5 @@
-# You have intercepted a secret message encoded as a string of numbers. The message is decoded via the following mapping:
+# You have intercepted a secret message encoded as a string of numbers. 
+# The message is decoded via the following mapping:
 
 # "1" -> 'A'
 

@@ -1,4 +1,5 @@
-# Given an array of n integers nums and an integer target, find the number of index triplets i, j, k with 0 <= i < j < k < n that satisfy the condition nums[i] + nums[j] + nums[k] < target.
+# Given an array of n integers nums and an integer target,
+#  find the number of index triplets i, j, k with 0 <= i < j < k < n that satisfy the condition nums[i] + nums[j] + nums[k] < target.
 
  
 
@@ -37,7 +38,7 @@ class Solution:
                     high -= 1
                 else:
                     #[-2,0,1,3], target = 2
-                    # [-2,0,1] 
+                    # [-2,0,1]  bc -2,0 as well and so 3 
                     # [-2,0,3]
                     numberOfTriplets += high - low
                     low += 1

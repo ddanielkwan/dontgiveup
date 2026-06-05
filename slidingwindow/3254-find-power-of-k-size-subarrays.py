@@ -2,7 +2,8 @@
 
 # The power of an array is defined as:
 
-# Its maximum element if all of its elements are consecutive and sorted in ascending order.
+# Its maximum element if all of its elements are consecutive <---
+# and sorted in ascending order.
 # -1 otherwise.
 # You need to find the power of all subarrays of nums of size k.
 

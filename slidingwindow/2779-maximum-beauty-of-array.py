@@ -10,7 +10,8 @@
 
 # Note that you can apply the operation to each index only once.
 
-# A subsequence of an array is a new array generated from the original array by deleting some elements (possibly none) without changing the order of the remaining elements.
+# A subsequence of an array is a new array generated from the original array by
+#  deleting some elements (possibly none) without changing the order of the remaining elements.
 
  
 
@@ -48,11 +49,22 @@ class Solution:
 #our current window is [1,2] if 0 <= 3 intersect then
 # nums[r] - k  <=  nums[l] + k
 # nums[r] - nums[l]  <=  2k
+
+#scartch that
+
+#so k means the space between the number
+# lets say uo have number 2 and k = 4
+#left boundary and right boundary = -2,6
+
+#in the window, if right - left is every > 2 x k , it means its no longer in the boundary
+
         for r in range(len(nums)):
             while nums[r] - nums[l] > 2*k:
                 l += 1
 
             res = max(res, r - l + 1)
-            
+            # For overlap, the right interval’s LEFT edge must not pass the left interval’s RIGHT edge:
+
+# nums[r] - k <= nums[l] + k
         return res
 

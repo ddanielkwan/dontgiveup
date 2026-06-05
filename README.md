@@ -43,6 +43,8 @@ Stack
 
 Binary Search
 - left pointer will always end at the first valid answer, because search space will always shrink
+- soemetimes abotu finding trnasition point monotonic
+- find position that holds true etc
 
 Linked List
 - do we need dummy node to help us? sometimes we do

@@ -1,6 +1,7 @@
 # The frequency of an element is the number of times it occurs in an array.
 
-# You are given an integer array nums and an integer k. In one operation, you can choose an index of nums and increment the element at that index by 1.
+# You are given an integer array nums and an integer k. 
+# In one operation, you can choose an index of nums and increment the element at that index by 1.
 
 # Return the maximum possible frequency of an element after performing at most k operations.
 
@@ -26,7 +27,8 @@ class Solution:
     def maxFrequency(self, nums: list[int], k: int) -> int:
         
         #intuition, window size should be sum(window) + k, beacuse 
-        #if window is [1,3,3] and k = 1, since we are incrementing, the highest sum we can go is [2, 3, 3] = 8 so the size is 8, not possible if [3,3,3], we will need a running sum variable
+        #if window is [1,3,3] and k = 1, 
+        # since we are incrementing, the highest sum we can go is [2, 3, 3] = 8 so the size is 8, not possible if [3,3,3], we will need a running sum variable
 
         l = 0
 
@@ -40,7 +42,8 @@ class Solution:
         for r in range(len(nums)):
 
             runningSum += nums[r]
-
+            #the reason we are ok with max here brcuase we are trying to caclaultefreq from left toright largest
+            
             while (r-l+1) * nums[r] > runningSum + k :
 
                 runningSum -= nums[l]

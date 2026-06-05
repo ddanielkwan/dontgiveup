@@ -1,6 +1,8 @@
-# You are given a string s consisting of the characters 'a', 'b', and 'c' and a non-negative integer k. Each minute, you may take either the leftmost character of s, or the rightmost character of s.
+# You are given a string s consisting of the characters 'a', 'b', and 'c' and a non-negative integer k. 
+# Each minute, you may take either the leftmost character of s, or the rightmost character of s.
 
-# Return the minimum number of minutes needed for you to take at least k of each character, or return -1 if it is not possible to take k of each character.
+# Return the minimum number of minutes needed for you to take at least k of each character,
+#  or return -1 if it is not possible to take k of each character.
 
  
 
@@ -29,7 +31,7 @@ class Solution:
         #makeinner window as big as i can as long as a b and c are all > k=
 
         l = 0
-
+        #usually we add , but this time, we would dtake away 
         res = float('inf')
         for r in range(len(s)):
             counts[ord(s[r])- ord('a')] -= 1

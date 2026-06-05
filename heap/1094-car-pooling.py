@@ -41,7 +41,7 @@ class Solution:
             currentCapacity += numpassengers
 
             while minheap and minheap[0][0] <= source: #theyve arrived
-                end, start, passengers = heapq.heappop(minheap)
+                _, _, passengers = heapq.heappop(minheap)
                 currentCapacity -= passengers
             
             if currentCapacity > capacity:

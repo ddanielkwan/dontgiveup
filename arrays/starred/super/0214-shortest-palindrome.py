@@ -28,7 +28,8 @@ class Solution:
         # #go from back to left, and find if the center is palindrome, that means we just need to add the remaining right side to left to make it palindrome
         # for r in range(len(s)-1,-1,-1):
         #     if palindrome(s[0:r+1]): 
-
+            #find not paldinrome suffix and add to front
+            #e.g aaabc -> bc is suffix so bcaaabc
         #         suffix = s[r+1:][::-1]
         #         return suffix + s
         

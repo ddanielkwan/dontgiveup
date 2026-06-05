@@ -69,7 +69,8 @@ class Solution:
         # reaches the start of source again.
         count = 0
 
-
+        #abc
+        #abcbc target
         for char in target:
 
             # If while finding, iterator reaches start of source again,
@@ -82,7 +83,7 @@ class Solution:
 
 
                 source_iterator = (source_iterator + 1) % m
-                if source_iterator == 0:
+                if source_iterator == 0: #if we started at beginning we went around once
                     count += 1
 
             # Loop will break when char is found in source. Thus, increment.

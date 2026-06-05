@@ -1,4 +1,7 @@
-# You are given an integer n representing the dimensions of an n x n grid, with the origin at the bottom-left corner of the grid. You are also given a 2D array of coordinates rectangles, where rectangles[i] is in the form [startx, starty, endx, endy], representing a rectangle on the grid. Each rectangle is defined as follows:
+# You are given an integer n representing the dimensions of an n x n grid, 
+# with the origin at the bottom-left corner of the grid. You are also given a 2D array of coordinates rectangles, 
+# where rectangles[i] is in the form [startx, starty, endx, endy], representing a rectangle on the grid. 
+# Each rectangle is defined as follows:
 
 # (startx, starty): The bottom-left corner of the rectangle.
 # (endx, endy): The top-right corner of the rectangle.

@@ -27,9 +27,6 @@ class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]: # type: ignore
     
 
-        first = l1
-        second = l2
-
         carry = 0 #because two numbers added and > 9 will have carry
         dummy = ListNode()  #this will be iterator
         iterator = dummy #pointer to beginning

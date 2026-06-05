@@ -46,7 +46,7 @@ class Solution:
                 return False
 
             # L cannot move right
-            if start[i] == "L" and i < j:
+            if start[i] == "L" and i < j: #these are indices
                 return False
 
             # R cannot move left

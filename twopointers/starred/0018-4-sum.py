@@ -10,7 +10,7 @@
 
 # Example 1:
 
-# Input: nums = [1,0,-1,0,-2,2], target = 0
+# Input: nums =  [1,0,-1,0,-2,2], target = 0
 # Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
 
 class Solution:
@@ -59,7 +59,7 @@ class Solution:
                 if i > start and nums[i] == nums[i - 1]:
                     continue
                 
-                doubles.append(nums[i])
+                doubles.append(nums[i]) #basically just putting anchor point 
                 kSum(k-1, i + 1, target - nums[i])
                 doubles.pop()
             return

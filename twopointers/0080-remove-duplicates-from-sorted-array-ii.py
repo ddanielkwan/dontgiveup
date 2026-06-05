@@ -30,27 +30,21 @@ class Solution:
 
         #because its sorted, all duplicates are grouped together so just check if we already have two of them
 
-        pointer = 0
+        iterator = 0
 
-        r = 0
+        insertPointer = 0
 
-        while r < len(nums):
-            count = 1
-            char = nums[r]
-
-            while r + 1 < len(nums) and nums[r] == nums[r+1]:
-                r += 1
+        while iterator < len(nums):
+            char = nums[iterator]
+            count = 0
+            while iterator  < len(nums) and nums[iterator] == char:
                 count += 1
-            
-
+                iterator += 1
             for _ in range(min(count, 2)):
-                nums[pointer] = char
-                pointer += 1
+                nums[insertPointer] = char
+                insertPointer += 1
             
-            r += 1
-            
-        return pointer
-
+        return insertPointer
             
 
 

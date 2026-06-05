@@ -13,53 +13,53 @@ sliding window status
 
 
 May 16 Status
-- Arrays
-    - finished regular, need to go through starred and super
+- Arrays ✅
+    - finished regular (55mins), need to go through starred and super (40mins)
 `
-- Two Pointers
-    - finsihed regular
+- Two Pointers ✅
+    - finsihed regular (30mins), finished starred ( 30mins)
 
-- Sliding Window
-    - done regular
+- Sliding Window ✅
+    - done regular (40mins)
 
-- Stack
-    - done regular
+- Stack ✅
+    - done regular (25mins)
 
-- Binary Search
-    - regular
+- Binary Search ✅
+    - regular (30mins)
 
-- Linked List
-    - done
+- Linked List ✅
+    - done both regular and starred (55mins)
 
-- Trees
-    - regular
+- Trees ✅
+    - regular (50mins) starred not yet starred
 
-- Heaps
-    - yup
+- Heaps ✅
+    - yup (1hour 10mins) except for ipo
 
+- 1D Dynamic Programming ✅
+    - need to review some (45mins) not burst balloons
 
-- 1D Dynamic Programming
-    - need to review some
+- Intervals  ✅
+    - yes all (40 mins)
 
-- Intervals 
-    - yes
+- 2D DP 
+    - no (1hour) everything except for two fingers and max path score in grid
 
-- 2D DP
-    - no
-
-- Greedy
-    - yeah
+- Greedy ✅ except for gas station
+    - yeah all (45mins)
 
 - Advanced Graphs
 
-- Tries
-    - sure?
+- Tries ✅
+    - yes regular (25mins)
 
-- Backtracking
+- Backtracking✅
+    - all (25mins)
 
-
-- Graphs
+- Graphs  ✅
     - stars and regular
+    - regular (1hour)
 
 - Math and Geometry
     - sure

@@ -68,8 +68,7 @@ class Solution:
             if not count[diff]:
                 return -1
             
-            #valid then 
-            # add their chemistry (product of skills)
+     #valid
             res += s * diff
 
             # remove that player diff and current player s 

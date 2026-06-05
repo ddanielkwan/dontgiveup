@@ -1,6 +1,7 @@
 # Given a 2D matrix matrix, handle multiple queries of the following type:
 
-# Calculate the sum of the elements of matrix inside the rectangle defined by its upper left corner (row1, col1) and lower right corner (row2, col2).
+# Calculate the sum of the elements of matrix inside the rectangle defined by its upper left corner (row1, col1) and 
+# lower right corner (row2, col2).
 # Implement the NumMatrix class:
 
 # NumMatrix(int[][] matrix) Initializes the object with the integer matrix matrix.
@@ -16,7 +17,7 @@ class NumMatrix:
         #we have to add extra row on top and extra row on left because edge case if its square on top left, we have to substract the squares above and left oob
         ROWS = len(matrix)
         COLS = len(matrix[0])
-
+        #this is for extra 0s on toop and dleft 
         self.sumMatrix = [[0] * (COLS + 1) for r in range(ROWS + 1 )] 
         #the matrix is not same size as sumMatrix, need offset by 1
         for r in range(ROWS):

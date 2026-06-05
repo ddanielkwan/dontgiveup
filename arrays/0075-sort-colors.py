@@ -34,18 +34,21 @@ class Solution:
 
         #use 3 pointers
 
-        ptr = 0
-        red = 0
-        blue = len(nums) - 1
+        ptr = 0 #used to iterate
+        red = 0 #set red as beginning oflist
+        blue = len(nums) - 1 #set blue at end of list
 
 
-        while ptr <= blue:
+        while ptr <= blue:#iterate
 
-            if nums[ptr] == 0 :
+            if nums[ptr] == 0 : #if current element is red move to front (safe) because we already compared all before
                 nums[red], nums[ptr] = nums[ptr], nums[red]
                 red += 1
                 ptr += 1
-            elif nums[ptr] == 2:
+            elif nums[ptr] == 2: #if current element is blue, we swap with pointer,
+                #but not safe yet because we don't know what value the one we justswapped wiht is
+                #don't increment ptr yet
+                #let next iteration handle
                 nums[blue], nums[ptr] = nums[ptr], nums[blue]
                 blue -= 1
             else:

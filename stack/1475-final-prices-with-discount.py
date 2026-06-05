@@ -21,7 +21,7 @@
 
 class Solution:
     def finalPrices(self, prices: list[int]) -> list[int]:
-        #intuition : store mono decreasing stack and when you see smaller value, check if stack has larger value and then calculate discount
+        #intuition : store mono increasing stack and when you see smaller value, check if stack has larger value and then calculate discount
 
         stack = [] #store price, index
         #q : is basically find cheaper next item

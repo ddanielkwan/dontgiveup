@@ -26,12 +26,15 @@
 class Solution:
     def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:
         ans = [0] * n 
-
+        #we mark where addition starts
+        #where addition stops
         for start, end , seats in bookings:
             ans[start-1] += seats
             if end < n:
                 ans[end] -= seats
+        # [0,10,0,0,-10]
 
+        # means 0, 10 10 10, 0
         #prefix sum
         for i in range(1,n):
             ans[i] += ans[i-1]

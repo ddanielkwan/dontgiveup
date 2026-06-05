@@ -1,5 +1,6 @@
 # there are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. 
-# You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course ai first if you want to take course bi.
+# You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates 
+# that you must take course ai first if you want to take course bi.
 
 # For example, the pair [0, 1] indicates that you have to take course 0 before you can take course 1.
 # Prerequisites can also be indirect. If course a is a prerequisite of course b, and course b is a prerequisite of course c, 

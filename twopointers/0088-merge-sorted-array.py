@@ -28,7 +28,6 @@ class Solution:
         #we use two pointers one for each array, and have a pointer that starts from the end
 
         total = m + n #get total number of elements
-        zeroes = total - m #total number of zeroes
 
         pointer = total - 1 #since were dealing with indices 
 

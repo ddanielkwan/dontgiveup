@@ -4,7 +4,9 @@
 
 
 
-# A cyclic rotation of the matrix is done by cyclically rotating each layer in the matrix. To cyclically rotate a layer once, each element in the layer will take the place of the adjacent element in the counter-clockwise direction. An example rotation is shown below:
+# A cyclic rotation of the matrix is done by cyclically rotating each layer in the matrix. 
+# To cyclically rotate a layer once, each element in the layer will take the place of the adjacent element 
+# in the counter-clockwise direction. An example rotation is shown below:
 
 
 # Return the matrix after applying k cyclic rotations to it.
@@ -50,9 +52,9 @@ class Solution:
 
         m, n = len(grid), len(grid[0])
 
-        layers = min(m, n) // 2
+        layers = min(m, n) // 2 #because we process twice row and col
 
-        for layer in range(layers):
+        for layer in range(layers): 
 
             top = layer
             left = layer

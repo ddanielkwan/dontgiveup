@@ -12,7 +12,8 @@
 # "i57n" -> (i mplem entatio n, adjacent substrings are replaced.)
 # "i012n" -> (has leading zeros)
 # "i0mplementation" (replaces an empty substring)
-# You are given a string named word and an abbreviation named abbr, return true if abbr correctly abbreviates word, otherwise return false.
+# You are given a string named word and an abbreviation named abbr, 
+# return true if abbr correctly abbreviates word, otherwise return false.
 
 # A substring is a contiguous non-empty sequence of characters within a string.
 

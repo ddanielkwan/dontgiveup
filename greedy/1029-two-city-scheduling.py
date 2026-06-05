@@ -58,7 +58,7 @@ class Solution:
         res = 0
         for i in range(len(diffs)):
             if i < len(diffs) // 2:
-                res += diffs[i][2]
+                res += diffs[i][2] #person 2 because its muhc harder to fly preson a because that would be more expensive 
             else:
                 res += diffs[i][1]
 

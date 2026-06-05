@@ -59,6 +59,10 @@ class Solution:
                 leftMin, leftMax = leftMin - 1, leftMax + 1
             if leftMax < 0:
                 return False
+            
+            # # unmatched open parentheses can never be negative
+# if leftMin < 0, it means we can use '*' as empty
+# so the minimum possible unmatched opens becomes 0
             if leftMin < 0:
                 leftMin = 0
         return leftMin == 0

@@ -32,14 +32,14 @@ class Solution:
 
         
         result = [-1] * len(intervals)
-        for start, end, index in intervals:
+        for _, end, index in intervals:
             res = -1
             l = 0
             r = len(intervals) - 1
             while l <= r :
 
                 m = l + (r-l)//2
-                compareStart, compareEnd, newIndex = intervals[m]
+                compareStart, _, newIndex = intervals[m]
 
                 if compareStart >= end:
                     #we found potential

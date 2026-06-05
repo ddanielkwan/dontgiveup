@@ -16,8 +16,7 @@ class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         res = []
         substack = []
-        openn = n
-        closedn = n 
+
         def bt(opened, closed):
 
             if closed == opened == n :

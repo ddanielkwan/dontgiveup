@@ -15,7 +15,7 @@ class Solution:
 
         #we can store the cumulative sum, and then use that to subtract k from it
         #that means, e.g 10 - k = 6, do we have a array in prefixCount hashmap, that has 6 as the key and how many
-        #so we store the sum : count 
+        #so we store th e sum : count 
 
         for number in nums:
             currentSum += number 

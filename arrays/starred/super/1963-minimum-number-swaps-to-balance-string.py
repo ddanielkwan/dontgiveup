@@ -26,11 +26,15 @@
 # - Swap index 1 with index 5. s = "[[][]]".
 # The resulting string is "[[][]]".
 
-
 class Solution:
     def minSwaps(self, s: str) -> int:
+        close = maxClose = 0
 
-
-
-
-
+        for c in s:
+            if c == '[':
+                close -= 1
+            else:
+                close += 1
+            maxClose = max(maxClose, close)
+        
+        return (maxClose+1)//2

@@ -2,7 +2,8 @@
 
 # actuali is the actual amount of energy you spend to finish the ith task.
 # minimumi is the minimum amount of energy you require to begin the ith task.
-# For example, if the task is [10, 12] and your current energy is 11, you cannot start this task. However, if your current energy is 13, you can complete this task, and your energy will be 3 after finishing it.
+# For example, if the task is [10, 12] and your current energy is 11, you cannot start this task.
+#  However, if your current energy is 13, you can complete this task, and your energy will be 3 after finishing it.
 
 # You can finish the tasks in any order you like.
 
@@ -21,42 +22,42 @@
 #     - 1st task. Now energy = 2 - 1 = 1.
 # Notice that even though we have leftover energy, starting with 7 energy does not work because we cannot do the 3rd task.
 
-# class Solution:
-#     def minimumEffort(self, tasks: List[List[int]]) -> int:
-#         #binary search
-#         # tasks with bigger (minimum - actual)
-#         # should be done earlier
-#         tasks.sort(key=lambda t: (t[1] - t[0]), reverse=True)
+class Solution1:
+    def minimumEffort(self, tasks: List[List[int]]) -> int:
+        #binary search
+        # tasks with bigger (minimum - actual)
+        # should be done earlier
+        tasks.sort(key=lambda t: (t[1] - t[0]), reverse=True)
 
-#         def canFinish(energy):
+        def canFinish(energy):
 
-#             cur = energy
+            cur = energy
 
-#             for actual, minimum in tasks:
+            for actual, minimum in tasks:
 
-#                 # cannot even start this task
-#                 if cur < minimum:
-#                     return False
+                # cannot even start this task
+                if cur < minimum:
+                    return False
 
-#                 # spend energy
-#                 cur -= actual
+                # spend energy
+                cur -= actual
 
-#             return True
+            return True
 
-#         # binary search answer
-#         left = 0
-#         right = sum(b for a, b in tasks) 
+        # binary search answer
+        left = 0
+        right = sum(b for a, b in tasks) 
 
-#         while left < right:
+        while left < right:
 
-#             mid = (left + right) // 2
+            mid = (left + right) // 2
 
-#             if canFinish(mid):
-#                 right = mid
-#             else:
-#                 left = mid + 1
+            if canFinish(mid):
+                right = mid
+            else:
+                left = mid + 1
 
-#         return left
+        return left
 
 
 
@@ -71,10 +72,7 @@ class Solution:
         tasks.sort(key=lambda t: (t[1] - t[0]))
      
         energy = 0
-        #imagine backwards
-        #imagine w eknow for some tasks we need 20 energy, because we did it already
-        #now looking at next task
-        #[5,12]
+      
 
         #that would mean we need either 20+5, or minimum to get it done
         # so thats why its max
@@ -84,3 +82,4 @@ class Solution:
 
         return energy
 
+#doing the tasks backwards

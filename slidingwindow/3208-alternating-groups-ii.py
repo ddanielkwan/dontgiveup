@@ -10,7 +10,7 @@
 
 # Note that since colors represents a circle, the first and the last tiles are considered to be next to each other.
 
- 
+
 
 # Example 1:
 

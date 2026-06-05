@@ -18,7 +18,11 @@
 
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-
+        #the idea here is
+        #store all data in our hashmap
+        #then for every iteration, if we find that we need that data
+        #we look it up
+        #
         hashmap = {}
         #have a hashmap store the difference between target and n, index
         for index, n in enumerate(nums):

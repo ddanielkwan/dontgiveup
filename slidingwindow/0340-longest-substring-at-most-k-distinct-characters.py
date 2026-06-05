@@ -1,4 +1,5 @@
-# Given a string s and an integer k, return the length of the longest substring of s that contains at most k distinct characters.
+# Given a string s and an integer k,
+#  return the length of the longest substring of s that contains at most k distinct characters.
 
  
 
@@ -35,7 +36,7 @@ class Solution:
 
             while len(freq) > k: #invalid
                 #shrink it
-                charLeft = s[l]
+            
                 freq[s[l]] -= 1
                 if freq[s[l]] == 0:
                     del freq[s[l]]

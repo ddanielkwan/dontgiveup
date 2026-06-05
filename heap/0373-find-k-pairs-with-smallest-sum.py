@@ -53,7 +53,7 @@ class Solution:
         visited.add((0, 0))
 
         while k > 0 and minHeap:
-            val, (i, j) = heappop(minHeap)
+            _, (i, j) = heappop(minHeap)
             #our heap will handle which one to use 
             ans.append([nums1[i], nums2[j]])
             #get the next from nums1

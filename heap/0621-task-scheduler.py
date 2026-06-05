@@ -39,7 +39,7 @@ class Solution:
         # Queue to store tasks that are "cooling down"
         # Each item = [remaining_count, time_when_it_can_be_used_again]
 
-        q = deque()
+        q = deque() #we need to use aqueue because we need to keep track of fifo data
 
         t = 0
 

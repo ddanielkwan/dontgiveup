@@ -75,14 +75,14 @@ class Solution:
 
 
         l1, l2 = 0, 0
-
+        #forward
         while l1 < len(s1) and l2 < len(s2) and s1[l1] == s2[l2]:
             l1 += 1
             l2 += 1
 
         
         r1, r2 = len(s1)-1, len(s2)-1
-
+        #from backshots
         while r2 >= 0 and r1 >= 0 and s1[r1] == s2[r2] :
             r1 -= 1
             r2 -= 1

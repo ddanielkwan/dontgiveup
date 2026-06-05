@@ -40,24 +40,24 @@ class Solution:
         # return res
 
         #line sweep
-        store = defaultdict(int)
-        for s, e in firstList:
-            store[s] += 1
-            store[e + 1] -= 1 #this interval just ended, we dont want e = -1 because e is inclusive
-        for s, e in secondList:
-            store[s] += 1
-            store[e + 1] -= 1
+        # store = defaultdict(int)
+        # for s, e in firstList:
+        #     store[s] += 1
+        #     store[e + 1] -= 1 #this interval just ended, we dont want e = -1 because e is inclusive
+        # for s, e in secondList:
+        #     store[s] += 1
+        #     store[e + 1] -= 1
 
-        res = []
-        active = 0
-        prev = None
-        for x in sorted(store):
-            if active == 2:
-                res.append([prev, x - 1])
-            active += store[x]
-            prev = x #Because after processing position x, 
-            # you need to remember where the next potential intersection would start
-        return res
+        # res = []
+        # active = 0
+        # prev = None
+        # for x in sorted(store):
+        #     if active == 2:
+        #         res.append([prev, x - 1])
+        #     active += store[x]
+        #     prev = x #Because after processing position x, 
+        #     # you need to remember where the next potential intersection would start
+        # return res
 
 
         #two pointers

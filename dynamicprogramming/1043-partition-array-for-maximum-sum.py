@@ -1,4 +1,5 @@
-# Given an integer array arr, partition the array into (contiguous) subarrays of length at most k. After partitioning, each subarray has their values changed to become the maximum value of that subarray.
+# Given an integer array arr, partition the array into (contiguous) subarrays of length at most k.
+#  After partitioning, each subarray has their values changed to become the maximum value of that subarray.
 
 # Return the largest sum of the given array after partitioning. Test cases are generated so that the answer fits in a 32-bit integer.
 
@@ -51,3 +52,18 @@ class Solution:
         return dfs(0)
                 
 
+
+#tabulation
+class Solution:
+    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
+        n = len(arr)
+        dp = [0] * (n + 1)
+
+        for i in range(n - 1, -1, -1):
+            cur_max = 0
+            for j in range(i, min(n, i + k)):
+                cur_max = max(cur_max, arr[j])
+                window_size = j - i + 1
+                dp[i] = max(dp[i], dp[j + 1] + cur_max * window_size)
+
+        return dp[0]

@@ -21,7 +21,7 @@ class Solution:
         #so find the gap that has the largest value
 
         gaps = defaultdict(int)
-        gaps[0] = 0
+        gaps[0] = 0 #dont use first will have most gaps
 
         for row in wall:
             indexGap = 0 

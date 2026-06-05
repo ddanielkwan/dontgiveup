@@ -17,7 +17,7 @@ class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]: # type: ignore
         if not head:
             return
-
+        #so the gap begween two pointesr are n apart
         curr = head
         for _ in range(n):
             curr = curr.next

@@ -2,7 +2,8 @@
 
 # For each query i, you have to find the following:
 
-# The minimum distance between the element at index queries[i] and any other index j in the circular array, where nums[j] == nums[queries[i]]. If no such index exists, the answer for that query should be -1.
+# The minimum distance between the element at index queries[i] and any other index j in the circular array, where nums[j] == nums[queries[i]].
+#  If no such index exists, the answer for that query should be -1.
 # Return an array answer of the same size as queries, where answer[i] represents the result for query i.
 
  
@@ -69,14 +70,29 @@ class Solution:
         #value: [index1, index2]
         for i, num in enumerate(nums):
             positions[num].append(i)
-
+        #step 2
 # For the element at index i, what is the nearest same-value index on the left
         leftNeighbor = [-1] * n 
         rightNeighbor = [-1] * n
 
         # build neighbor relationships
+        #this for loop does:
+        #[1,3,1,4,1,3,2]
+        #focus on value 1 
+        #there are indices
+        #[0,2,4]
+
+
+        #this for loop, goes through every one and looks at one left one right occurence
         for arr in positions.values():
 
+                #e.gnums = [1,3,1,4,1,3,2]
+                # positions = {
+#     1: [0,2,4], 
+#     3: [1,5],
+#     4: [3],
+#     2: [6]
+# }
             m = len(arr)
 
             if m == 1:
@@ -101,9 +117,9 @@ class Solution:
 
             for neighbor in [leftNeighbor[q], rightNeighbor[q]]:
 
-                d = abs(q - neighbor)
+                distance = abs(q - neighbor)
 
-                best = min(best, d, n - d)
+                best = min(best, distance, n - distance)
 
             result.append(best)
 

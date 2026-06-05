@@ -17,6 +17,17 @@
 # Time range [1-3]+[3-6] , we get profit of 120 = 50 + 70.
 
 
+
+
+
+
+
+
+
+
+
+
+
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         
@@ -42,7 +53,7 @@ class Solution:
             res = dfs(i+1)
 
             #include 
-            #if we want to include the job 
+            #if we want to include the job , we have to go to the index that we dont intersect with
             j = i + 1
             while j < len(intervals):
                 #trying to fidn te max for overlapping intevvals

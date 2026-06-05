@@ -32,13 +32,14 @@ class Solution:
         #     return triangle[row][col] + min(dfs(row+1, col),dfs(row+1,col+1))
         # return dfs(0,0)
 
-        dp = [0] * (len(triangle)+1)
+        dp = [0] * (len(triangle)+1) #ths is the row below
 
         for row in triangle[::-1]:
             for i, n in enumerate(row):
                 #this is top down
                 #bottom row is 0 000 thts why + 1 trainagel
                 dp[i] = n + min(dp[i], dp[i+1]) 
-                #this index is pssible becase if you look from top, row 1 -> 0 index, row2 ->indices 0 and 1, since we do bottom up., btoom alwascalcualedfoirst
+                #this index is pssible becase if you look from top, row 1 -> 0 index, row2 ->indices 0 and 1,
+                #  since we do bottom up., btoom alwascalcualedfoirst
         return dp[0]
 

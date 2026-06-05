@@ -61,7 +61,8 @@ class Solution:
                     break
                 
                 curr = curr.next
-            remainder -= (1 if remainder else 0)
+            remainder -= (1 if remainder else 0) #how many more parts stil need an extra node, 
+            
             if curr:
                  #disconnect and then go next
                 curr.next, curr = None, curr.next

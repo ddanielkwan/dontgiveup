@@ -18,7 +18,7 @@ class Solution:
         #what is a sequence? a sequence means the numbers come consecutively , 1 , 2 , 3 
         #how do we know what is a beginning of a sequence?
         #  if the element - 1 is not in the nums, then we can start tracking
-
+        #pattern here: look at everything that could be a start 
         longestConsecutiveElements = 0
 
         nums = set(nums)

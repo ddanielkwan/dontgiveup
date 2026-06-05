@@ -30,7 +30,7 @@ class Solution:
         for day, temperature in enumerate(temperatures):
             
             while stack and temperature > stack[-1][1]:
-                prevDay, prevTemp = stack.pop()
+                prevDay, _ = stack.pop()
                 answer[prevDay] = day - prevDay
             
             stack.append([day, temperature])

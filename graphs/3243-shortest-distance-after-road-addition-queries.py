@@ -1,6 +1,7 @@
 # You are given an integer n and a 2D integer array queries.
 
-# There are n cities numbered from 0 to n - 1. Initially, there is a unidirectional road from city i to city i + 1 for all 0 <= i < n - 1.
+# There are n cities numbered from 0 to n - 1.
+#  Initially, there is a unidirectional road from city i to city i + 1 for all 0 <= i < n - 1.
 
 # queries[i] = [ui, vi] represents the addition of a new unidirectional road from city ui to city vi. 
 # After each query, you need to find the length of the shortest path from city 0 to city n - 1.
